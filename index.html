@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ween’s Projects</title>
+  <meta name="description" content="A living log of Ween’s creative projects." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="/">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="/about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+        <div class="small">Posts are listed in upload order (top = newest). Add a post by updating <code>posts/manifest.json</code>.</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <section class="hero">
+      <h1>A running log of projects I actually ship.</h1>
+      <p>
+        I do a lot. I forget to record it. This site fixes that.
+        Each post is a little “receipt” — photos, notes, and what I learned.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <div class="card-inner">
+          <div class="post-title">Latest posts</div>
+          <div class="post-meta">
+            <span class="pill">Markdown posts</span>
+            <span class="pill">Images supported</span>
+            <span class="pill">GitHub Pages</span>
+          </div>
+          <div id="index-posts"></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-inner">
+          <div class="post-title">How to add a post</div>
+          <div class="markdown">
+            <ol>
+              <li>Copy <code>posts/example-post-10.02.26.html</code></li>
+              <li>Rename to <code>posts/TITLE-DD.MM.YY.html</code></li>
+              <li>Edit the markdown inside <code>&lt;script type="text/markdown"&gt;</code></li>
+              <li>Add the new post to <code>posts/manifest.json</code> (top = newest)</li>
+              <li>Commit + push — GitHub Pages updates automatically</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

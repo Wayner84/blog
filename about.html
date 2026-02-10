@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Ween’s Projects</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="/">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="/about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">you are here</div>
+          </div>
+          <div class="meta" aria-hidden="true">✓</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <section class="hero">
+      <h1>About me</h1>
+      <p>
+        I’m Ween. I build things: engineering prototypes, 3D prints, little software tools, and whatever else
+        I get obsessed with for a week. This site is me being intentional about documenting it.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <div class="card-inner markdown">
+          <h2>Why this exists</h2>
+          <p>
+            I’m good at doing the work — not great at showing it. So I’m treating this like a public lab notebook:
+            short posts with photos, what I tried, what worked, what didn’t, and what I’d do differently next time.
+          </p>
+
+          <h2>What you’ll see here</h2>
+          <ul>
+            <li>3D printed fixtures and prototypes (CAD → print → iterate)</li>
+            <li>Resin print experiments + support strategies</li>
+            <li>Small scripts and tools I build to speed up the work</li>
+            <li>Occasional “build logs” for furniture / shop improvements</li>
+          </ul>
+
+          <h2>Contact</h2>
+          <p>
+            For now: this page is a placeholder. When you’re ready, add links here (GitHub, Instagram, email, etc.).
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

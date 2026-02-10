@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="example-post-10.02.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="/">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="/about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">Project log</span>
+          <span class="pill">Date: <span id="post-date">—</span></span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <!--
+    POST TEMPLATE:
+    - Write markdown inside this tag.
+    - Images: put files in /assets/images/ and link like: ![alt](../assets/images/file.jpg)
+    - Keep the filename format: posts/TITLE-DD.MM.YY.html
+    - Update posts/manifest.json (newest first)
+  -->
+  <script type="text/markdown" id="post-markdown">
+# Example Post: V-Block, Resin Forces & Why I’m Logging Everything
+
+I do loads of work and then… it vanishes. No photos. No notes. No proof.
+
+So this is the new rule: **if I build it, it gets a post**. Even if the post is scrappy.
+
+---
+
+## What I worked on
+
+- A **V-block** concept (simple fixture, high usefulness)
+- A quick **resin peel/suction force estimator** for MSLA prints
+
+## Why it matters
+
+Resin prints fail *exactly* when you’ve got:
+
+- big cross-sectional area
+- trapped cups / poor drainage
+- too-weak supports
+
+So if I can identify the “high area layers”, I can make smarter choices: orientation, hollowing, drain holes, and support density.
+
+## A photo slot (how to embed images)
+
+Add an image file under `assets/images/` and reference it like this:
+
+![A placeholder image goes here](../assets/images/placeholder.svg)
+
+(Replace `placeholder.svg` with your photo filename.)
+
+## Notes to future me
+
+- Keep posts short.
+- Always include: **what, why, what I learned, what’s next**.
+
+## What’s next
+
+- Calibrate the force model using real printer lift settings.
+- Add a "risk mesh" view so I can see *where* on the model the ugly layers live.
+  </script>
+
+  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/post.js"></script>
+</body>
+</html>
