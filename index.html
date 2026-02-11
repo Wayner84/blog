@@ -62,12 +62,27 @@
     <section class="hero">
       <h1>A running log of projects I actually ship.</h1>
       <p>
-        I do a lot. I forget to record it. This site fixes that.
-        Each post is a little receipt: photos, what I tried, what worked, and what I learned.
+        I work on a lot of projects and tinker with so much stuff but I never record or document anything,
+        so this is me doing just that — this is a running log of what I’m working on, why and what I’ve gained from it,
+        if anything!
       </p>
     </section>
 
     <section class="grid">
+      <article class="card">
+        <div class="card-inner">
+          <div class="post-title">About me</div>
+          <div class="markdown">
+            <p>
+              I work on a lot of projects and tinker with so much stuff but I never record or document anything,
+              so this is me doing just that — this is a running log of what I’m working on, why and what I’ve gained from it,
+              if anything!
+            </p>
+          </div>
+          <div class="small" style="margin-top:10px">More: <a href="./about.html">the longer about page</a>.</div>
+        </div>
+      </article>
+
       <article class="card">
         <div class="card-inner">
           <div class="post-title">Latest posts</div>
@@ -78,22 +93,6 @@
           </div>
           <div id="index-posts"></div>
           <div class="small" style="margin-top:10px">Tip: the menu (top-left) always lists posts newest → oldest.</div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-inner">
-          <div class="post-title">Posting workflow (simple on purpose)</div>
-          <div class="markdown">
-            <ol>
-              <li>Copy <code>posts/example-post-10.02.26.html</code></li>
-              <li>Rename it to <code>posts/TITLE-DD.MM.YY.html</code></li>
-              <li>Edit the markdown inside <code>&lt;script type="text/markdown" id="post-markdown"&gt;</code></li>
-              <li>Drop photos into <code>assets/images/</code> and reference them in markdown</li>
-              <li>Add the new entry to <code>posts/manifest.json</code> (top = newest), then push</li>
-            </ol>
-            <p class="small">No build step. No database. Just commit and it’s live.</p>
-          </div>
         </div>
       </article>
     </section>
