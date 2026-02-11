@@ -30,18 +30,20 @@ function renderMarkdownInto(container, markdown) {
 
 async function initPostPage() {
   try {
+    const root = window.__WEEN_BLOG__?.getSiteRoot?.() || '/';
+    const joinRoot = window.__WEEN_BLOG__?.joinRoot || ((r, p) => r + String(p || '').replace(/^\//, ''));
+
     const manifest = await window.__WEEN_BLOG__.fetchManifest();
     const posts = manifest.posts || [];
 
     const current = document.querySelector('meta[name="post:slug"]')?.content || slugFromPath(location.pathname);
-
     const idx = posts.findIndex(p => slugFromPath(p.path) === current);
 
     const prevPost = (idx >= 0 && idx < posts.length - 1) ? posts[idx + 1] : null; // older
     const nextPost = (idx > 0) ? posts[idx - 1] : null; // newer
 
-    setBtn(document.querySelector('#btn-prev'), prevPost?.path, 'Previous');
-    setBtn(document.querySelector('#btn-next'), nextPost?.path, 'Next');
+    setBtn(document.querySelector('#btn-prev'), prevPost ? joinRoot(root, prevPost.path) : null, 'Previous');
+    setBtn(document.querySelector('#btn-next'), nextPost ? joinRoot(root, nextPost.path) : null, 'Next');
 
     // Render markdown
     const md = document.querySelector('#post-markdown')?.textContent || '';

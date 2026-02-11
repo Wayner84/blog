@@ -1,7 +1,31 @@
 /* Global site behavior: drawer menu + manifest loading */
 
+function getSiteRoot() {
+  // Works both for:
+  // - https://user.github.io/ (root)
+  // - https://user.github.io/repo/ (subdir)
+  // - post pages under /posts/
+  const path = window.location.pathname || '/';
+
+  // Directory of the current document
+  let dir = path.endsWith('/') ? path : path.slice(0, path.lastIndexOf('/') + 1);
+
+  // If we're inside /posts/, the site root is one level up from that folder.
+  if (dir.endsWith('/posts/')) dir = dir.slice(0, -('/posts/'.length));
+
+  // Ensure it ends with a single slash.
+  if (!dir.endsWith('/')) dir += '/';
+  return dir;
+}
+
+function joinRoot(root, p) {
+  const clean = String(p || '').replace(/^\//, '');
+  return root + clean;
+}
+
 async function fetchManifest() {
-  const res = await fetch('/posts/manifest.json', { cache: 'no-store' });
+  const root = getSiteRoot();
+  const res = await fetch(joinRoot(root, 'posts/manifest.json'), { cache: 'no-store' });
   if (!res.ok) throw new Error('Failed to load manifest.json');
   return await res.json();
 }
@@ -44,8 +68,10 @@ function renderDrawerPosts(posts) {
   if (!list) return;
   list.innerHTML = '';
 
+  const root = getSiteRoot();
+
   posts.forEach((p) => {
-    const a = el('a', { class: 'nav-link', href: p.path }, [
+    const a = el('a', { class: 'nav-link', href: joinRoot(root, p.path) }, [
       el('div', {}, [
         el('div', { class: 'name' }, [p.title]),
         el('div', { class: 'meta' }, [p.date])
@@ -62,8 +88,10 @@ function renderIndexPosts(posts) {
   if (!list) return;
   list.innerHTML = '';
 
+  const root = getSiteRoot();
+
   posts.forEach((p) => {
-    const item = el('a', { class: 'nav-link', href: p.path }, [
+    const item = el('a', { class: 'nav-link', href: joinRoot(root, p.path) }, [
       el('div', {}, [
         el('div', { class: 'name' }, [p.title]),
         el('div', { class: 'meta' }, [p.date])
@@ -88,6 +116,8 @@ async function initSite() {
 }
 
 window.__WEEN_BLOG__ = {
+  getSiteRoot,
+  joinRoot,
   fetchManifest,
   initSite,
   closeDrawer,
