@@ -2,6 +2,11 @@
   "title": "Ween’s Projects",
   "posts": [
     {
+      "title": "Vee Block Clamp Tests",
+      "date": "14.02.26",
+      "path": "posts/vee-block-clamp-tests-14.02.26.html"
+    },
+    {
       "title": "Vee Blocks, Resin Suction Forces and Logging",
       "date": "10.02.26",
       "path": "posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html"

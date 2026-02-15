@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="vee-block-clamp-tests-14.02.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">14.02.26</span>
+          <span class="pill">Vee Blocks</span>
+          <span class="pill">Clamp</span>
+          <span class="pill">Threads</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <!--
+    POST TEMPLATE:
+    - Write markdown inside this tag.
+    - Images: put files in /assets/images/ and link like: ![alt](../assets/images/file.jpg)
+    - Keep the filename format: posts/TITLE-DD.MM.YY.html
+    - Update posts/manifest.json (newest first)
+  -->
+  <script type="text/markdown" id="post-markdown">
+# Vee Block Clamp Tests
+
+I’ve been doing a few **thread tests**, and it turns out it’s surprisingly hard to get a thread that’s *both* printable and actually functional (good engagement, correct fit, and not a pain to assemble).
+
+For the **vee block clamp** itself I need a bit of flexibility (unlike the vee block body), so I’m moving this part to the **FDM printer in ABS**.
+
+I’d normally consider PLA because it’s easy, but PLA has a huge problem with **creep over time**. These clamps won’t see crazy forces, but if I’m holding a part for a few hours a day on a CMM, PLA will slowly relax. So: **ABS it is**.
+
+That leaves the big question:
+
+- What do I do about the **threads** on the clamp?
+- Do I use **brass heat inserts**?
+- Do I **tap** directly into the FDM print?
+
+It’s a lot of decisions for what should be a simple threaded part.
+
+To get some real answers, I ordered:
+
+- **M6 brass heat inserts** from AliExpress (ridiculously cheap)
+- A **tap and die set (M2–M12)** (also cheap, but honestly the quality looks great for the price)
+
+The goal with these purchases is simple: figure out what’s actually going to work for the final product.
+
+![M6 brass heat inserts (AliExpress)](../assets/images/vee-block-clamp-tests-brass-inserts-14.02.26.jpg)
+
+![Tap and die set (M2–M12)](../assets/images/vee-block-clamp-tests-tap-and-die-set-14.02.26.jpg)
+
+---
+
+## Test 1: tapping directly into FDM ABS
+
+I printed a set of simple blocks to test the “just tap the plastic” approach.
+
+Print settings / notes:
+
+- **3 wall perimeters** to give enough material for the thread to cut into
+- Followed the *Zeus* book **tapping drill sizes** for **M3, M4, M6, M8**
+- I was modelling in a hurry (half watching a film) and **forgot to chamfer** the holes… which definitely didn’t help for starting the taps
+
+Six sample parts took **just under an hour** to print.
+
+Results:
+
+- **M8, M6, and M4** tapped completely fine
+- They were a bit finicky to start (a chamfer would have helped a lot)
+- **M3** started cutting, but the fine pitch ended up pulling plastic out and it wouldn’t properly bite
+
+Next steps for the M3:
+
+- First I’ll re-print with a **proper chamfer**
+- If it still behaves badly, I’ll try **increasing the tapping drill size** slightly
+
+Realistically, for FDM I’m probably going to stick to **M4 and above** anyway — the pitch gets so small at M3 that stripping becomes way too easy.
+
+---
+
+## Test 2: clamp prototypes — heat insert vs tapped hole
+
+Now that I know tapping into ABS is at least viable, the next test is to print some clamps for the **35 mm² vee blocks**.
+
+I’m going to print two clamp samples:
+
+1) One with an **M6 heat insert**
+2) One with a **5 mm hole** for **tapping M6** directly
+
+Both will be **solid infill** for these tests.
+
+For now I’ll use a simple bolt for clamping, because it’s high quality and strong enough to not be a variable.
+
+Once I’ve decided the direction, I’ll figure out the final plan for the **threaded shaft / clamping screw** part.
+
+---
+
+## The threaded shaft problem (and a possible shortcut)
+
+I did a quick preliminary test on making printed “studs” and cutting the thread using a die:
+
+- One shaft at **11.87 mm** for **M12**
+- One shaft at **7.97 mm** for **M8**
+
+A quick Google gave me those diameters for die-cutting, but they’re likely intended for metal.
+
+Both shafts **split at the layer line**, which is not surprising given they were printed vertically.
+
+What I’m going to try next:
+
+- Print horizontally (or at least not purely vertical)
+- Go slightly more undersized
+- Try resin as well — although I expect it to be **too brittle**
+
+If printed shafts keep being unreliable, the “boring but strong” approach is probably best:
+
+- Use a **headed bolt** as the shaft
+- Add a **knurled/hand knob** at the top for easy turning
+
+That does add some cost, but it might be worth it for reliability.
+A quick AliExpress search looks like about **75p for 10**, so it’s not outrageous.
+
+The aim here is to choose whatever gives the most consistent, durable clamp — even if it’s not the purest “fully printed” solution.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>
