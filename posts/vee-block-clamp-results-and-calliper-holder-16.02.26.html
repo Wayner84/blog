@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="vee-block-clamp-results-and-calliper-holder-16.02.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">16.02.26</span>
+          <span class="pill">Vee Blocks</span>
+          <span class="pill">Clamp</span>
+          <span class="pill">Fixtures</span>
+          <span class="pill">Calliper Holder</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# Vee block clamp results and calliper holder
+
+I’ve completed both clamp tests (**tapped holes** and **threaded inserts**). I ran out of white ABS, so I had to finish the print in **black ABS**.
+
+[Photo: clamp test parts — to be added]
+
+---
+
+## Clamp test: tapped holes
+
+The tapped part worked **flawlessly** — no issues starting the tap (even though I forgot the chamfer again…).
+
+One thing I *could* do with is a simple fixture to hold the tap **perpendicular** to the part. It would make tapping faster and more consistent, and I’m pretty sure this won’t be the last part I ever tap.
+
+So that’s on the list: a **tap guide / perpendicular tapping fixture**.
+
+---
+
+## Clamp test: heat-set inserts
+
+The heat-set insert test gave me a bit more trouble.
+
+The part wasn’t quite thick enough, so once I hit the point where the plastic is properly melting, I started getting some **deformation**. I mitigated it as best I could, but the end result is a **slightly wonky thread**.
+
+As you can see, it’s not a huge issue — the clamp still functions — but I’m chasing consistency.
+
+Same conclusion as the tapping: I want a little fixture/jig so I can insert these **square and repeatable**, without distorting the part.
+
+---
+
+## Next steps
+
+Overall: good test.
+
+Next I’m going to:
+
+- Print a **second batch** slightly thicker
+- Tap them at **M6** to match the heat-set insert size
+- Develop fixtures for:
+  - perpendicular tapping
+  - perpendicular heat-set insert installation
+
+Once I’ve got better perpendicularity and consistency between methods, I’ll move on to testing **clamping forces**.
+
+---
+
+## Calliper holder
+
+At my current workplace, the two digital callipers end up living on the desk and constantly getting in the way.
+
+So I drew up a quick sketch (literally tracing them) and made a simple holder to get them out of the way.
+
+[Photo: calliper holder — to be added]
+
+Right now it’s stuck to the back of the monitor with **double-sided tape**.
+
+For the real product I need to decide on a proper mounting method — options I’m considering:
+
+- screw mount
+- Velcro
+- magnet
+
+Not 100% sure yet — but the actual holder works great. Once I’ve settled on mounting, that’s an **actual product ready for sale**.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>
