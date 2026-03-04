@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="when-life-gives-you-lemons-04.03.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">04.03.26</span>
+          <span class="pill">Prop Build</span>
+          <span class="pill">3D Printing</span>
+          <span class="pill">Finishing</span>
+          <span class="pill">Painting</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# When life gives you lemons
+
+A project I worked on a while back was creating a replica **portal gun** from the game *Portal*.
+
+[Image placeholder: Portal gun reference image]
+
+I printed it on my Ender 3 years ago and didn’t really put a lot of work into the post-processing. Recently I found out the shells to the gun were still intact, so I decided to rescue them and reprint the rest of the pieces on my new printer (the ones that broke while it was in storage).
+
+---
+
+## First shell: seams, sanding, paint
+
+I started by sanding the first piece and filling the seam with **Milliput**. I went from about **150 grit all the way up to 1500**.
+
+I’ve got a friend who professionally paints cars, so I asked him about painting it. He primed it and painted the first piece white for me, which came out really nice.
+
+He said the best finish (since it isn’t entirely glossy) is:
+
+- sand to a really high grit
+- then clear coat it
+
+So I’ve done the first pass at 150 to take off the high points, and now I’m going to work through the rest of the grits up to about **3000**.
+
+[Photo placeholder: sanding progress — to add]
+
+---
+
+## Next piece
+
+The next piece is a lot bigger so it’s going to need a lot more filling and sanding to refine the shape and remove the layer lines.
+
+One thing I’ve noticed: sanding paint is way easier than removing layer lines — the layer line sanding takes forever.
+
+More updates soon once the next parts are reprinted and I’m further into the finishing.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>

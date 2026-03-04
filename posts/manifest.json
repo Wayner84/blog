@@ -2,6 +2,16 @@
   "title": "Ween’s Projects",
   "posts": [
     {
+      "title": "MUFT upgrade",
+      "date": "04.03.26",
+      "path": "posts/muft-upgrade-04.03.26.html"
+    },
+    {
+      "title": "When life gives you lemons",
+      "date": "04.03.26",
+      "path": "posts/when-life-gives-you-lemons-04.03.26.html"
+    },
+    {
       "title": "So much prototyping",
       "date": "01.03.26",
       "path": "posts/so-much-prototyping-01.03.26.html"
