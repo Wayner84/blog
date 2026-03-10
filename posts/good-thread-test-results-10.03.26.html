@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="good-thread-test-results-10.03.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">10.03.26</span>
+          <span class="pill">Thread Tests</span>
+          <span class="pill">Vee Block Clamp</span>
+          <span class="pill">Resin</span>
+          <span class="pill">FDM</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# Good thread test results!
+
+I’ve reprinted the vee block clamps slightly thicker to mitigate the warping during inserting the brass inserts, and to give more wall thickness when tapping.
+
+I still need to find something to tap **perpendicularly**. The plastic is so weak that it’s very easy to thread at a slight angle and cause issues when the screw goes through (it won’t clamp properly).
+
+![Two vee block clamps — tapped on the left, insert on the right](../assets/images/good-thread-test-results-clamps-10.03.26.jpg)
+
+You can clearly see that the tapped part isn’t perpendicular, so this is my next priority.
+
+As this is unlikely to be the only thing I need to tap… this brings me onto my next test.
+
+---
+
+## Resin threads
+
+The resin printer takes significantly longer to print, process, calibrate, etc — so I haven’t been able to get as much testing done as I’d have liked.
+
+The test I did complete failed due to **insufficient supports**… again…
+
+However (silver lining), the **M12, M10 and M8 holes** came out straight enough to actually test tapping.
+
+I mis-tapped the M10 and stripped the start of the thread, so I need to think about that — maybe slightly larger holes than the standard tapping drill size.
+
+![Resin thread test piece (warped, but threads tapped well)](../assets/images/good-thread-test-results-resin-piece-10.03.26.jpg)
+
+You can clearly see it’s warped as hell, but to my pleasant surprise the material is **much more rigid** and less brittle than I first thought.
+
+I was expecting to struggle tapping into resin, but it worked completely fine — better than FDM in fact. And due to increased material hardness, there’s less likely to be durability issues.
+
+I’m not sure on the exact values — I’ll look into this in the meantime.
+
+---
+
+## Next: resin clamp comparison
+
+Given that the threads worked as good as they did, I need to consider making the vee block clamp out of resin too — it would be good to get a direct comparison between the two.
+
+I’ve started a vee block clamp print on the resin. It should hopefully be finished later this evening; if not, I’ll see what I can do with it tomorrow and do a comparison.
+
+I still need to reinforce the supports on the main vee block to get that printing correctly, but I’m going to do this first since I can get a result quicker — then decide what materials I’m going to use for the final product going forward.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>
