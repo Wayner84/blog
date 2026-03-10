@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="working-with-what-ive-got-10.03.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">10.03.26</span>
+          <span class="pill">Workshop</span>
+          <span class="pill">Organisation</span>
+          <span class="pill">3D Printing</span>
+          <span class="pill">Furniture</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# Working with what I’ve got
+
+Despite my best efforts to construct a cabinet to hold my printers, I was actually short on lumber — I didn’t have enough **84” lengths**.
+
+So I’ve had to modify the design slightly to work with what I *do* have, since I need the organisation as a priority.
+
+![Desk area with printers and storage](../assets/images/working-with-what-ive-got-desk-10.03.26.jpg)
+
+---
+
+## The quick redesign
+
+It’s only a simple rectangle shape, but it gives me:
+
+- an area for **both printers**
+- a **work area** for post-processing
+- loads more storage space for **filament**, **resin**, and random electronic bits (way too many consoles)
+
+As you can see I managed to repurpose a set of drawers to fit under the desk, which gives me even more storage.
+
+I’d still like to add a shelf underneath for better resin storage — but for now this gives me an area to work in.
+
+---
+
+## Tools, compromises, and a cleaner finish
+
+I’ll revisit this again when I get some more lumber and have a mitre saw to help with cutting (using a multitool is rather difficult!).
+
+To tidy it up, I printed some basic **10 mm cylinders** to plug the screw holes.
+
+I needed to recess the screws slightly to give me enough length of screw, so the plugs helped hide that — I sanded them down flush with the bench and it looks a lot cleaner.
+
+Now I’ve got loads more space, I’ve got lots of plans for more material testing.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>
