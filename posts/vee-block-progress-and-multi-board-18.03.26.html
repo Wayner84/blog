@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="vee-block-progress-and-multi-board-18.03.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">18.03.26</span>
+          <span class="pill">Vee Blocks</span>
+          <span class="pill">Resin Printing</span>
+          <span class="pill">CNC</span>
+          <span class="pill">Multi Board</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# Vee block progress and multi board
+
+I’ve made some good progress on the vee blocks.
+
+After **four failed prints**, battling **warping** and the print **shifting during the job**, I finally got a good result by using **heavy supports around the perimeter** and **medium auto-generated supports elsewhere**.
+
+The surface finish on the supported end still isn’t perfect, but there’s no major warping now and overall the part looks good.
+
+---
+
+## First successful batch
+
+I printed my first full batch to see how larger quantities would affect the result.
+
+I filled the bed with **10 copies** and it printed with **no issues at all**.
+
+That tells me I can clearly use the whole bed without suction forces becoming a problem, at least with the **retraction distance** I currently have set.
+
+The resin settings I’m using are the built-in **Lychee Slicer community presets**. They’re based on settings with successful print history from other users, and so far the preset has given me really solid results.
+
+---
+
+## Measuring the result
+
+I measured one of the parts on the **CMM** and the results are great.
+
+There’s barely any deviation in the **90° angle**, which is exactly what I wanted to see.
+
+There is some deviation in the **overall length**, but that was expected because of the scarring left by the supports.
+
+---
+
+## Not done yet
+
+Originally I was ready to call this a success and move on.
+
+But the perfectionist in me can’t really accept this as the finished product.
+
+There’s still some very minor warping on one end, and the support scarring creates issues with the part sitting perfectly flat.
+
+So I’ve come up with a better solution.
+
+I’m going to bring in a **cheap CNC router** — very much a hobby-kit-level machine — but it should still be more than capable of finishing these parts properly.
+
+The plan is to:
+
+- increase the part thickness slightly to **51 mm total**
+- emboss my logo **1.08 mm deep** so it remains after machining
+- machine off **1 mm of material** from the supported side
+
+That should bring the part back to the correct length, remove the support scarring, and leave me with a much squarer, cleaner, better-quality product — still at a fraction of the cost of making them from metal.
+
+The machine will take around a week to arrive, and I can’t order it until the **25th**, so I’ll do another vee block update once I’ve got a better final finish.
+
+---
+
+## Multi board progress
+
+I’ve also been making progress on the **multi board** setup for the printing area.
+
+For anyone who hasn’t seen it before, multi board is a modular wall organisation system built around grids of **octagon-styled holes** that all kinds of accessories can snap into — shelves, drawers, holders, and loads of other variants.
+
+I’ve printed a board that’s **1200 mm wide by 475 mm tall**.
+
+It’s taken ages to print all the parts, but I’m nearly there now. I still have a few panels left to print, and the clips are all complete.
+
+This is mainly just a progress update for the workshop organisation side of things, but the goal is for it to hold all of my printing tools and give me shelves for the things I need quick access to.
+
+The next update should be the full finished panel.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>
