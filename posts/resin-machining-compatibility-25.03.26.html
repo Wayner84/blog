@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="resin-machining-compatibility-25.03.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">25.03.26</span>
+          <span class="pill">Vee Blocks</span>
+          <span class="pill">Resin</span>
+          <span class="pill">Machining</span>
+          <span class="pill">CNC</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# Resin machining compatibility
+
+Since buying a CNC router to machine these vee blocks is a fairly big investment, I needed to make sure it was actually a viable route before fully committing. To test that, I asked a colleague if he could quickly skim the surface of **2 of the 10** prototype vee blocks I printed, just to see whether I was making the right call.
+
+The results were better than I expected. He said the material machined really well and wasn’t difficult to work with at all. It didn’t crack, split, or chip on the edges either, which if I’m honest, was something I expected might happen.
+
+The machined surface looks great, and overall I’m really impressed. It definitely seems like a viable method for removing excess material and improving both the quality and dimensional accuracy of the final product.
+
+![Machined face of the resin vee block after skimming](../assets/images/resin-machining-compatibility-machined-face-25.03.26.jpg)
+
+That said, the test wasn’t completely without fault. He did mention there was a slight lip on the bottom face of the vee block caused by warping. He only removed around **1 mm** of material, so taking off a little more could help, but I think the better solution is simply to machine all of the faces.
+
+At this point, these parts are reaching a quality level I’m genuinely happy with. They’re not just a cheaper alternative — they’re turning out far better than I expected for a budget option.
+
+To back that up, I measured the surface finish of the machined face to confirm whether machining all faces down to final dimension would be the best approach.
+
+![Surface finish reading showing Ra 0.456 µm](../assets/images/resin-machining-compatibility-surface-finish-25.03.26.jpg)
+
+And there it is: **Ra 0.456 µm**.
+
+That’s a really respectable finish for what’s intended to be a lower-cost option, so I’m now fully convinced that machining the faces clean is the right move.
+
+The machine has been ordered, and it should be here next week.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>
