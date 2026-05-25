@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">25.05.26</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Self-hosting</span>
+          <span class="pill">Paperless-ngx</span>
+          <span class="pill">Immich</span>
+          <span class="pill">Hermes Agent</span>
+          <span class="pill">Minecraft</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# Docker Containers I've found helpful and a new AI agent
+
+It feels like the right time for a new blog post.
+
+The main focus recently has been getting my digital workflow working properly. I’ve now got **Tailscale** on all my devices, a few useful **Docker containers** running, and a much smoother setup for managing documents, media, files, agents, and even Minecraft.
+
+## Paperless-ngx
+
+I’ve known about **Paperless-ngx** for a while, but I never got round to setting it up. With the mountain of paperwork I end up needing to search through for random letters or old documents I vaguely remember having, it was becoming tiresome.
+
+Paperless aims to solve exactly that problem and make it seamless.
+
+We’ve all worked somewhere with the dreaded **scans** folder. Nothing is categorised, files get used once and forgotten about, and eventually the whole thing becomes clunky and useless. Long-term storage of PDF files can also become costly because a lot of them are essentially massive images. If you’re saving three pages of documents per delivery, for example, that file space adds up quickly.
+
+Even worse, you still can’t search them properly. Unless you remembered to name the file something sensible at the time, finding it again becomes guesswork.
+
+We all know the frustration.
+
+With Paperless, the idea is simple: **scan and forget, until you need to find it**.
+
+That is where it becomes powerful. Paperless performs **OCR** — optical character recognition — on all documents, making the actual content searchable. As long as you can remember any bit of what was inside the document, you can search for it.
+
+It goes a step further with tags and categories too. Paperless can automatically apply tags and categories to documents. At the beginning it might need some tweaking, but after about 50 documents it starts getting better at self-categorising. Once you’ve scanned in the third supplier invoice, it can identify what it is and put it in the right place.
+
+I’m yet to meet someone who has actually integrated this into a company workflow, but I’m keen to teach people that it’s an option.
+
+Another big added value is the storage of PDFs in **PDF/A**, which is designed for long-term storage and archiving. It is an ISO standard format, so it is tried and tested, and it should be better suited to archiving than random image-heavy PDFs scattered around a drive.
+
+The web UI is very nice as well. You can perform searches by content, category, or tag, then view the copy inside the web UI without having to download it.
+
+It’s much better to leave the file management to the software and let the web UI be the go-to place for users.
+
+So why am I even raving on about this?
+
+Well, I’ve literally just set it up. I need to spend some time tonight scanning in my documents, but I also need to find a decent mobile scanner since I don’t have an actual scanner. With a **200 MP camera**, I should be fine.
+
+Once I’ve got it up and running properly, I’ll share some results on how much better it is.
+
+## Immich
+
+Since switching from iOS to Android, I’ve had to deal with the fact that I no longer have **400 GB of iCloud storage**. And, being the slightly paranoid person I am, there is no way I’m switching properly to Google cloud services. I just don’t trust it with my personal data. iOS was different.
+
+But I still have around **130 GB of photos and videos**, plus about **75 GB of files**.
+
+The files are sorted. I have them on a shared network drive through Tailscale.
+
+The issue is backup. I don’t want to back up my images or files to a cloud service.
+
+This is where **Immich** comes in.
+
+Immich is an open source replacement for Google Photos. Yes, I do have to upload my media, but instead of just having a photos folder on my shared drive that isn’t searchable, has no context awareness, and doesn’t let me search by place or object, I now have a web UI.
+
+That web UI can access the shared drive and lets me search my media across devices, not just using Xiaomi Photos locally on my phone.
+
+The photos app on my phone does let me search, and it isn’t cloud-based, but it only works on the phone. Since switching to a higher quality camera, my media library is growing quickly. I won’t always be able to keep every photo on my phone forever.
+
+At the moment I have about **500 GB free**, but I don’t want all of that filled with media. Once I hit around **200 GB**, I’ll start offloading the oldest 50 GB or so.
+
+A lot of ranting, I know, but Immich fixes this issue for me. It lets me keep all of my media “on the cloud” — actually self-hosted and accessed securely through Tailscale — while keeping a smaller subset on my phone for quick access. I think **150 GB of recents** is more than enough.
+
+Immich does face scanning and object search, so I can search by people, places, or object. Basically what I can do on my phone now, but across **all** of my media.
+
+The biggest advantage of this container?
+
+**Open source. Self hosted. No Google.**
+
+Everything is private, just the way I like it.
+
+It is already saving me **£4.99 a month** by not paying for cloud services. That might not sound like a lot, but after nearly 10 years it adds up. Plus, who’s to say they won’t train AI on my image data in the future?
+
+Well, no more.
+
+Since moving over, I’ve deleted all of my iCloud files and data. Same with Google — not that Google had much on it, but just to be safe. From now on, security and privacy come first when it comes to my media.
+
+## New AI agent
+
+Something I’ve been struggling with lately is **OpenClaw**. The recent updates have killed it for me. My config is suddenly no longer valid for no clear reason, and this sort of thing happens all the time. The gateway times out, disconnects, restarts, and it has been giving me nightmares. I almost gave up on autonomous agents completely.
+
+Then I found **Hermes Agent**.
+
+It promised an easy transition from OpenClaw, including copying over my config, memory files, soul file, and so on. From what I could tell, it also seemed more stable than OpenClaw. On top of that, it supports **OpenAI Codex authentication**, so there’s no spending money on tokens.
+
+So I gave it a go.
+
+I shut down OpenClaw and ran the one-liner from Hermes. The install was dead simple. It found my OpenClaw setup, migrated automatically, and I had it back up and running on WhatsApp within about 10 minutes.
+
+Even better, it remembered everything I had done previously.
+
+That is a godsend, because I had blog post specifics, how to post to my partner’s website, loads of specific information that I needed it to remember.
+
+But it is a lot more autonomous than OpenClaw was. I ask it to do something, and it does it.
+
+The first task I tried was installing Fusion 360. I told it to install it and said I’d log in afterwards. It went away, made itself a little task list, found an install method, tried PowerShell first, then used the web after that didn’t work. It installed it and messaged me to log in after the installer finished.
+
+Zero approval or interaction from me.
+
+So far, so good.
+
+The best thing for me is the skills. It seems to know when it needs to use a skill, and if it has spent a lot of time trying to achieve a task, it creates a skill for next time. So when I ask it to find me a decent second-hand laptop, it now has a skill to search for second-hand products without reinventing the wheel every time.
+
+Even the session history seems superior. It doesn’t save daily memory in a single file, but session history is always recorded and remains searchable. That removes the need for an offline LLM just for memory search like OpenClaw needed.
+
+So far, I’m satisfied.
+
+It’s always scary giving an AI access to your life, but in this day and age it’s almost essential. I couldn’t live without it now. ChatGPT is great, but I want an AI that understands what I want it to do, not one that makes vague assumptions based on nothing.
+
+For me, being able to ask it to run a simulation and whack the results into my clone drive is much simpler than asking GPT to create a script, downloading it, running it, then storing the results in the right place myself.
+
+Hermes does all that, including the sorting. I hate to say it, but it’s a damn lot better than me at sorting files properly.
+
+## Bedrock Minecraft server
+
+We all know what Minecraft is. I don’t need to explain it — it’s only the most popular game in the world.
+
+Me and my friend played over **4,400 in-game days** on a realm a couple of years back. We were absolutely obsessed. We built everything you can imagine: automatic machines, farms, huge monolithic structures. We are basically invincible in that world.
+
+But, as we all do, we got bored and stopped playing. The realm ran out, and I thought we’d lost our world permanently.
+
+The other night I logged into my friend’s Microsoft account to download a game from the Microsoft Store since my Game Pass had run out. Lo and behold, although the realm had expired, the world was still there and available to download.
+
+This is where Hermes came in again.
+
+All I had to do was download the world and send a simple one-liner asking Hermes to get a Docker container dedicated server running with our old world. I told it where the world file was, and it handled the rest.
+
+It works perfectly, and it even synced the player data. I know I probably should have expected that, but I was still surprised it wasn’t just the world file.
+
+So it’s time for another 4,000 Minecraft day binge. No doubt I’ll get bored again, but at least we’re not paying monthly for it this time.
+
+## Final notes
+
+There are a few more containers I could mention, but I’d like to explore them further and properly understand how they work and what they achieve before I do a write-up on them.
+
+As always, I am busy — just not documenting as much.
+
+The main focus at the moment has been getting my digital workflow working seamlessly. Now I’ve got Tailscale on all my devices, and Docker containers for the things that can sensibly be containerised, I’m feeling a lot better about managing everything digitally.
+
+**Peace and prosperity ✌️**
+  
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>

@@ -2,6 +2,11 @@
   "title": "Ween’s Projects",
   "posts": [
     {
+      "title": "Docker Containers I've found helpful and a new AI agent",
+      "date": "25.05.26",
+      "path": "posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html"
+    },
+    {
       "title": "Busy busy busy",
       "date": "28.04.26",
       "path": "posts/busy-busy-busy-28.04.26.html"
