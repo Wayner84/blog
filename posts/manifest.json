@@ -2,6 +2,11 @@
   "title": "Ween’s Projects",
   "posts": [
     {
+      "title": "CNC first actual test",
+      "date": "09.06.26",
+      "path": "posts/cnc-first-actual-test-09.06.26.html"
+    },
+    {
       "title": "Docker Containers I've found helpful and a new AI agent",
       "date": "25.05.26",
       "path": "posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html"

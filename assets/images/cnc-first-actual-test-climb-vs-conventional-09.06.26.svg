@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Climb milling versus conventional milling</title>
+  <desc id="desc">Two side by side diagrams showing cutter rotation, feed direction, and chip thickness difference between conventional and climb milling.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#f97316"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="650" fill="#f8fafc"/>
+  <text x="600" y="58" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#0f172a">Climb vs Conventional Milling</text>
+  <text x="600" y="94" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#475569">Same cutter, different relationship between feed direction and cutter rotation at the cut.</text>
+
+  <g transform="translate(60,135)" filter="url(#shadow)">
+    <rect x="0" y="0" width="510" height="455" rx="26" fill="#ffffff"/>
+    <text x="255" y="52" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0f172a">Conventional milling</text>
+    <text x="255" y="82" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#64748b">Feed opposes cutter motion at the cut</text>
+    <rect x="62" y="318" width="386" height="64" rx="10" fill="#94a3b8"/>
+    <text x="255" y="356" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Workpiece</text>
+    <circle cx="255" cy="228" r="82" fill="#e0f2fe" stroke="#0369a1" stroke-width="6"/>
+    <circle cx="255" cy="228" r="14" fill="#0369a1"/>
+    <g stroke="#0369a1" stroke-width="8" stroke-linecap="round">
+      <line x1="255" y1="146" x2="255" y2="175"/>
+      <line x1="255" y1="281" x2="255" y2="310"/>
+      <line x1="173" y1="228" x2="202" y2="228"/>
+      <line x1="308" y1="228" x2="337" y2="228"/>
+      <line x1="197" y1="170" x2="218" y2="191"/>
+      <line x1="292" y1="265" x2="313" y2="286"/>
+      <line x1="313" y1="170" x2="292" y2="191"/>
+      <line x1="218" y1="265" x2="197" y2="286"/>
+    </g>
+    <path d="M323 181 A82 82 0 0 1 333 262" fill="none" stroke="#f97316" stroke-width="7" marker-end="url(#arrow-orange)"/>
+    <path d="M415 420 H112" fill="none" stroke="#2563eb" stroke-width="7" marker-end="url(#arrow-blue)"/>
+    <text x="255" y="448" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#2563eb" font-weight="700">Feed direction</text>
+    <path d="M175 320 C206 306, 228 299, 253 292 C234 317, 211 336, 176 350 Z" fill="#fde68a" stroke="#b45309" stroke-width="3"/>
+    <text x="255" y="405" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#334155">Chip starts thin, exits thicker</text>
+  </g>
+
+  <g transform="translate(630,135)" filter="url(#shadow)">
+    <rect x="0" y="0" width="510" height="455" rx="26" fill="#ffffff"/>
+    <text x="255" y="52" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0f172a">Climb milling</text>
+    <text x="255" y="82" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#64748b">Feed follows cutter motion at the cut</text>
+    <rect x="62" y="318" width="386" height="64" rx="10" fill="#94a3b8"/>
+    <text x="255" y="356" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Workpiece</text>
+    <circle cx="255" cy="228" r="82" fill="#dcfce7" stroke="#15803d" stroke-width="6"/>
+    <circle cx="255" cy="228" r="14" fill="#15803d"/>
+    <g stroke="#15803d" stroke-width="8" stroke-linecap="round">
+      <line x1="255" y1="146" x2="255" y2="175"/>
+      <line x1="255" y1="281" x2="255" y2="310"/>
+      <line x1="173" y1="228" x2="202" y2="228"/>
+      <line x1="308" y1="228" x2="337" y2="228"/>
+      <line x1="197" y1="170" x2="218" y2="191"/>
+      <line x1="292" y1="265" x2="313" y2="286"/>
+      <line x1="313" y1="170" x2="292" y2="191"/>
+      <line x1="218" y1="265" x2="197" y2="286"/>
+    </g>
+    <path d="M187 181 A82 82 0 0 0 177 262" fill="none" stroke="#f97316" stroke-width="7" marker-end="url(#arrow-orange)"/>
+    <path d="M95 420 H398" fill="none" stroke="#2563eb" stroke-width="7" marker-end="url(#arrow-blue)"/>
+    <text x="255" y="448" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#2563eb" font-weight="700">Feed direction</text>
+    <path d="M335 320 C304 306, 282 299, 257 292 C276 317, 299 336, 334 350 Z" fill="#fde68a" stroke="#b45309" stroke-width="3"/>
+    <text x="255" y="405" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#334155">Chip starts thick, exits thinner</text>
+  </g>
+</svg>

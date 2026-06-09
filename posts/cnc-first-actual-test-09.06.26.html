@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="cnc-first-actual-test-09.06.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">09.06.26</span>
+          <span class="pill">Vee Blocks</span>
+          <span class="pill">CNC</span>
+          <span class="pill">Machining</span>
+          <span class="pill">Learning</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# CNC first actual test
+
+Even though I’m using the CNC for cleaning up the faces of the vee blocks, CNC is still pretty new to me. I know of it, and I know some terminology and techniques, but nothing like my CMM ability. It does help that they are a little similar, as they both use Cartesian coordinate systems, but the actual functions vary massively.
+
+For example, there’s climb and conventional milling. Which side you cut the material from makes a difference to surface finish, quality, and even size.
+
+![Simple diagram showing climb milling vs conventional milling](../assets/images/cnc-first-actual-test-climb-vs-conventional-09.06.26.svg)
+
+Not only that, there’s loads to consider: speeds, feeds, stepdown, stepover, coolant or not, and plenty more. I could go on forever, because there is so much that controls how a CNC performs the cut. Even tool definitions can be complicated for a newbie.
+
+Anyone who knows me knows that when I see something I have no idea about, I personally take that as a challenge. Plus it would be advantageous to understand machining techniques, since I’m the one measuring the result. This could help with defining how to check a feature within inspection.
+
+I’m not going to go through each setting I defined, because that’s boring and people know better than me anyway, but I’ll highlight what I learned from it.
+
+## Face milling
+
+When face milling, it’s ideal to only cut in one direction. The change of direction alternates between conventional and climb milling, which creates a step on the face between cuts and doesn’t give the best surface finish.
+
+My fault. I left the settings default and forgot to change it to climb mill only.
+
+## Surface finish
+
+My surface finish wasn’t great overall on the part. This was likely due to tool selection. I had switched to a 6 mm 2-flute cutter to trial aluminium cutting, but didn’t change it before cutting the resin part.
+
+Apparently 2-flute cutters don’t cut along the whole length, so I was likely seeing welding occur throughout the cut. I still need to run trials to figure out how much I can get away with cutting per stepdown on a 4-flute 6 mm cutter.
+
+I’ve been told I should be able to chew through it, and I’ve been taking half a mil cuts, which is likely too small and causing friction. This explains why I got poor surface finish all over, even when doing circle cuts inside the 10 mm bore.
+
+Anyway, it’s all learning. I’m going to try modelling some new features, mainly contouring, facing, and some spiral hole making, and give it another go.
+
+I’m getting lots of feedback from actual machinists, which really helps with what to change and what to consider when setting the job up.
+
+The CAM software itself is relatively easy. Once I understand which settings affect which things, that makes it even simpler. It also visualises and simulates all of my tool paths so I can be sure I won’t crash, something I’m very thankful for!
+
+I’m really enjoying learning CNC. It’s very satisfying to program something and end up with a complete product, unlike CMM where you don’t end up with anything physical, bar an inspection report.
+
+It’ll also aid me a lot in the ability to manufacture parts to different tolerances. Since there will be requirements for specialist fixturing, I need the capability to finish printed components to a high quality — and within tolerance, of course.
+
+![Machined resin vee block after the first CNC test](../assets/images/cnc-first-actual-test-product-09.06.26.jpg)
+
+For now, it’s another step forward and another reminder that the measuring side and the manufacturing side are linked more closely than I first realised.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>
