@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="more-cnc-16.06.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">16.06.26</span>
+          <span class="pill">CNC</span>
+          <span class="pill">Machining</span>
+          <span class="pill">Electronics</span>
+          <span class="pill">Learning</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# MORE CNC!
+
+After a lot of feedback on my first few machining trials, it turned out my spindle speed was too high and my feed rate was too low. This time I went with roughly 5,800 RPM, with a surface speed — look, I am learning! — of 110 m/min. The feed rate was 466 mm/min.
+
+I’ve been scared to overdo the cutting, so I’d been running high spindle speed with a low feed rate, but that isn’t how it works. Especially when I’ve gone from a 2.5 mm cutter to a 6 mm one. Here’s me thinking I could use the same speeds and feeds. How silly.
+
+Even though I don’t have coolant or air at the moment — my airbrush compressor is dead and I can’t find the damn charger — I kept the tool clean while it was running with a brush and a hoover (*vacuum cleaner, for you Americans*). Not only did this stop swarf getting everywhere, it definitely helped with friction.
+
+## The dodgy-but-clamped setup
+
+Now, some of you are going to absolutely hate my setup. It’s okay, I do too, but I don’t have a vice (*yet*).
+
+![CNC setup with the resin vee block clamped using T-nuts, plates, and lollipop sticks](../assets/images/more-cnc-setup-16.06.26.jpg)
+
+Yes, those are lollipop sticks. Yes, it looks dodgy. But I have T-nuts and everything is clamped right. It is much tighter than it was without the lollipop sticks because of the parallel clamping force.
+
+I didn’t go for anything too complicated yet, since I’m just learning how to properly calculate speeds and feeds — as well as learning that surface speed apparently matters! So this was just a simple contour mill, with a roughing pass, a finishing pass, and then a face for the top.
+
+## Contouring and facing
+
+Both contours used Fusion’s adaptive clearing, which is great, but I do need to learn other methods because, from what I’ve heard, not all CAM software has it. The contour was 4.5 mm deep, with a 0.5 mm axial and radial finishing pass.
+
+The finish on the contour and the bottom face came out great, I won’t lie. With less friction I’m getting a much better finish.
+
+The face milling is something I’m happy with again, but I was only taking a 0.5 mm cut. Something I’m not happy with is that the surface has a noticeable flatter section at the end of the facing, where the tool wasn’t passing over existing areas.
+
+I’ll ask around, but I already suspect my stepover for the face milling could probably be something like 2 mm. I will check before I foolishly make assumptions again, though.
+
+![Finished resin vee block test piece showing the machined contour and faced top surface](../assets/images/more-cnc-machined-part-16.06.26.jpg)
+
+## Still enjoying the CNC rabbit hole
+
+I’m really enjoying the CNC journey so far, and I’m excited to learn some more complicated stuff. I’m especially looking forward to getting into 3D geometry, like topographic maps. I’d like to make some maps out of wood or aluminium of some of the mountains I’ve hiked up.
+
+Now that I’ve finished with my college assignments for the year, I’ve got some free time and I’m utilising it as much as I can. As well as the CNC, I’m going to focus on some more electronics-based projects in preparation for the open source CMM.
+
+I don’t have an oscilloscope unfortunately — I do have one of those cheap “build your own” ones, but I haven’t built it yet, how ironic — but I do have a new DC power supply, a couple of Raspberry Pis and Arduinos, and a battery terminal welder. That means I can finally utilise my massive hoard of disposable vape batteries. Who the hell throws away a perfectly good battery?
+
+I’ve got a couple of hundred I’d like to use for small projects. Maybe a power bank. Who the hell knows!
+
+## Back into electronics and logic
+
+Given all that, I need to get back into the software as well as the hardware. It’s been a while since I spent my free time hacking EEPROMs, so I’ve got Cadence OrCAD installed. It’s a piece of software I distinctly remember being brilliant compared to the one the college provided, so I need to touch up my skills on it again and refresh my binary logic for logic gates.
+
+A very silly way for me to do this is with Minecraft.
+
+I have a server I’ve had open for years, and it’s been going for ages. If anyone knows anything about the game, it features a wiring mechanism called redstone, which functions virtually identically to real logic. It’s not the exact same at all, but it is Turing complete, and all gates can easily be replicated. Therefore, chips like adders and so on can be replicated too.
+
+The plan is either a roulette machine or a blackjack table against a “dealer”, whichever works out simpler.
+
+I’ve done the boring “make a calculator in the game” thing, so I’m going for something a little more interactive.
+
+Anyway, I’ve gone on too long. I’ll update with progress.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>

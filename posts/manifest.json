@@ -2,6 +2,11 @@
   "title": "Ween’s Projects",
   "posts": [
     {
+      "title": "MORE CNC!",
+      "date": "16.06.26",
+      "path": "posts/more-cnc-16.06.26.html"
+    },
+    {
       "title": "CNC first actual test",
       "date": "09.06.26",
       "path": "posts/cnc-first-actual-test-09.06.26.html"
