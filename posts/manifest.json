@@ -2,6 +2,11 @@
   "title": "Ween’s Projects",
   "posts": [
     {
+      "title": "CNC control with CNCjs, tool holders, and portable CAD",
+      "date": "18.06.26",
+      "path": "posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html"
+    },
+    {
       "title": "MORE CNC!",
       "date": "16.06.26",
       "path": "posts/more-cnc-16.06.26.html"

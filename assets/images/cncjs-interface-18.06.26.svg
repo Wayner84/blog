@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration of a CNCjs-style CNC control interface</title>
+  <desc id="desc">A dark dashboard-style CNC control interface with a 3D toolpath preview, serial connection controls, coordinate readouts, jogging controls, and G-code console.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f2937"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .small{font:500 22px system-ui,Segoe UI,Arial,sans-serif;fill:#94a3b8}.label{font:700 20px system-ui,Segoe UI,Arial,sans-serif;fill:#e2e8f0}.mono{font:600 23px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#cbd5e1}.num{font:800 38px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#f8fafc}.green{fill:#22c55e}.red{fill:#ef4444}.blue{fill:#38bdf8}.orange{fill:#f59e0b}.line{stroke:#334155;stroke-width:2}.tool{stroke:#38bdf8;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round}.cut{stroke:#f59e0b;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}.grid{stroke:#1e293b;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1400" height="850" rx="38" fill="url(#bg)"/>
+  <rect x="38" y="36" width="1324" height="778" rx="30" fill="#0b1120" filter="url(#shadow)"/>
+  <rect x="38" y="36" width="1324" height="74" rx="30" fill="#111827"/>
+  <circle cx="86" cy="73" r="13" fill="#ef4444"/><circle cx="126" cy="73" r="13" fill="#f59e0b"/><circle cx="166" cy="73" r="13" fill="#22c55e"/>
+  <text x="220" y="82" class="label" style="font-size:28px">CNCjs control panel</text>
+  <rect x="1080" y="56" width="236" height="34" rx="17" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="1103" cy="73" r="7" class="green"/><text x="1122" y="81" class="small" style="fill:#bbf7d0">Connected: /dev/ttyUSB0</text>
+
+  <rect x="70" y="140" width="790" height="505" rx="22" fill="url(#panel)" stroke="#243244"/>
+  <text x="100" y="178" class="label">Toolpath preview</text>
+  <g transform="translate(120 215)">
+    <rect x="0" y="0" width="690" height="380" rx="16" fill="#020617" stroke="#1e293b"/>
+    <g opacity="0.75">
+      <path d="M50 300H640M50 250H640M50 200H640M50 150H640M50 100H640M50 50H640" class="grid"/>
+      <path d="M90 30V340M160 30V340M230 30V340M300 30V340M370 30V340M440 30V340M510 30V340M580 30V340" class="grid"/>
+    </g>
+    <path d="M105 298 C140 220 214 177 300 190 C382 202 425 120 530 88" class="tool"/>
+    <path d="M132 308 L214 254 L304 270 L401 196 L531 164 L597 96" class="cut"/>
+    <path d="M265 310 h170 v-74 h-170 z" stroke="#22c55e" stroke-width="4" fill="rgba(34,197,94,.08)"/>
+    <circle cx="531" cy="164" r="10" fill="#f8fafc" stroke="#38bdf8" stroke-width="5"/>
+    <text x="445" y="355" class="small">X/Y/Z preview</text>
+  </g>
+
+  <rect x="895" y="140" width="437" height="200" rx="22" fill="url(#panel)" stroke="#243244"/>
+  <text x="925" y="178" class="label">Work position</text>
+  <text x="930" y="232" class="small">X</text><text x="980" y="236" class="num">125.420</text>
+  <text x="930" y="286" class="small">Y</text><text x="980" y="290" class="num">-18.050</text>
+  <text x="930" y="340" class="small">Z</text><text x="980" y="344" class="num">  5.000</text>
+
+  <rect x="895" y="365" width="437" height="280" rx="22" fill="url(#panel)" stroke="#243244"/>
+  <text x="925" y="404" class="label">Jog controls</text>
+  <g transform="translate(950 440)">
+    <rect x="90" y="0" width="88" height="58" rx="14" fill="#1e293b" stroke="#334155"/><text x="121" y="38" class="label">Y+</text>
+    <rect x="0" y="72" width="88" height="58" rx="14" fill="#1e293b" stroke="#334155"/><text x="34" y="110" class="label">X-</text>
+    <rect x="90" y="72" width="88" height="58" rx="14" fill="#334155" stroke="#475569"/><text x="122" y="110" class="label">0</text>
+    <rect x="180" y="72" width="88" height="58" rx="14" fill="#1e293b" stroke="#334155"/><text x="214" y="110" class="label">X+</text>
+    <rect x="90" y="144" width="88" height="58" rx="14" fill="#1e293b" stroke="#334155"/><text x="121" y="182" class="label">Y-</text>
+    <rect x="305" y="0" width="88" height="58" rx="14" fill="#1e293b" stroke="#334155"/><text x="338" y="38" class="label">Z+</text>
+    <rect x="305" y="144" width="88" height="58" rx="14" fill="#1e293b" stroke="#334155"/><text x="338" y="182" class="label">Z-</text>
+  </g>
+  <rect x="925" y="585" width="118" height="38" rx="19" fill="#0f172a" stroke="#334155"/><text x="955" y="611" class="small">0.1</text>
+  <rect x="1058" y="585" width="118" height="38" rx="19" fill="#0f172a" stroke="#334155"/><text x="1094" y="611" class="small">1</text>
+  <rect x="1191" y="585" width="118" height="38" rx="19" fill="#0f172a" stroke="#38bdf8"/><text x="1221" y="611" class="small" style="fill:#bae6fd">10 mm</text>
+
+  <rect x="70" y="670" width="1262" height="106" rx="22" fill="url(#panel)" stroke="#243244"/>
+  <text x="100" y="708" class="label">G-code / console</text>
+  <text x="100" y="744" class="mono">ok &gt; G1 X125.420 Y-18.050 F466</text>
+  <text x="100" y="774" class="mono" fill="#94a3b8">status: running • spindle: 5800 rpm • buffer: healthy</text>
+  <rect x="1105" y="701" width="88" height="50" rx="15" fill="#064e3b"/><text x="1130" y="734" class="label" style="fill:#bbf7d0">Run</text>
+  <rect x="1208" y="701" width="88" height="50" rx="15" fill="#7f1d1d"/><text x="1225" y="734" class="label" style="fill:#fecaca">Stop</text>
+</svg>
