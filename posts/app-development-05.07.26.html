@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Ween’s Projects</title>
+
+  <!-- This slug lets post.js find this entry in manifest.json -->
+  <meta name="post:slug" content="app-development-05.07.26.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <!-- Markdown renderer (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <div class="lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <a class="brand" href="../">
+        <div class="title">Ween’s Projects</div>
+        <div class="tag">a proof-of-work scrapbook</div>
+      </a>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" aria-label="Site menu">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="nav-section">
+        <div class="nav-label">Start here</div>
+        <a class="nav-link" href="../about.html">
+          <div>
+            <div class="name">About me</div>
+            <div class="meta">who’s building all this?</div>
+          </div>
+          <div class="meta" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Posts (newest first)</div>
+        <div id="drawer-posts"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="container">
+    <article class="card">
+      <div class="card-inner">
+        <h1 class="post-title" id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <span class="pill">05.07.26</span>
+          <span class="pill">Apps</span>
+          <span class="pill">Minecraft</span>
+          <span class="pill">Metrology</span>
+          <span class="pill">Android</span>
+        </div>
+
+        <div class="markdown" id="post-content"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </main>
+
+  <script type="text/markdown" id="post-markdown">
+# App development
+
+I’ve had quite a lot of development work going on recently, so I thought it was probably time to put a few of the projects in one place and talk about what I’ve been building.
+
+Some of these are already useful, some are still very rough, and a few are more about preserving old ideas before they disappear completely. Either way, they all come from the same place: I keep running into small annoyances, missing tools, or old bits of software that should exist in a better form, so I end up trying to build them.
+
+## Minecraft schematic studio
+
+The first app I want to mention is something I’ve had the idea for quite some time, but never properly got around to building: an editor for Minecraft schematics.
+
+The basic idea is that you can plan builds before having to build them in-game, then view them later layer by layer while recreating them in the world. I know Litematica already exists, but not for Bedrock, and that’s really where this started for me.
+
+I wanted a way to design Minecraft builds on the go without needing to load up a creative world, grab a controller, and do everything inside the game. A layer by layer view also makes it much easier to recreate Litematica designs in Bedrock, especially when you’re working from something large or detailed.
+
+![Minecraft Schematic Studio start screen with options for new designs, opening designs, importing Litematica files, and settings](../assets/images/minecraft-schematic-studio-home-05.07.26.jpg)
+
+The start screen lets you create a new design, load an existing one, or immediately import a .litematica file. Full Litematica support is something I really want for this app, partly because it allows Java players to import into the game, but also because there are already so many user-created designs out there. Being able to import those and view them layer by layer for recreation in Bedrock is a big part of the point.
+
+There is one awkward issue though: textures.
+
+Minecraft’s textures are owned by Microsoft, so the default textures in the app are just random generated ones. I’m pretty sure I used Python to generate them originally, but either way, I can’t include the real Minecraft textures by default. Microsoft would definitely not be happy about that.
+
+What I can do is allow texture pack importing. So if you use a Java texture pack, you can import it yourself and the app will use those textures. Technically that means you can import the default pack, I just can’t provide it.
+
+It also means you can import whatever texture pack you use in-game, so the designs in the app can match how your world actually looks.
+
+![Minecraft Schematic Studio settings screen showing dark mode, texture pack import, texture source reset, and design save directory options](../assets/images/minecraft-schematic-studio-settings-05.07.26.jpg)
+
+You can switch between dark mode and light mode too, although I’m still not really sure why anyone would want to leave dark mode.
+
+![Minecraft Schematic Studio build screen with a 3D preview, layer controls, drawing tools, grid editor, and customisable hotbar](../assets/images/minecraft-schematic-studio-build-screen-05.07.26.jpg)
+
+The app should have all the blocks from the current version of Minecraft. If it doesn’t, submit an issue on GitHub and I’ll get it sorted.
+
+There’s a hotbar at the bottom, and long pressing a slot lets you change the block, so you can customise it around whatever you’re building. Not all of the textures are perfect yet, but enough of it works now that the app is genuinely usable. You can import and edit Litematica files, build designs, and use the layer view to help recreate them.
+
+I’ll keep adding features and improving the design workflow, but I’m really proud that this actually works. It’s one of those apps that came from a very specific personal annoyance, and now it’s something that makes my life easier.
+
+The web and Android app is available here:
+
+https://github.com/Wayner84/minecraft-schematic-studio-mobile
+
+## TesaTouch
+
+TesaTouch is a legacy piece of optical inspection software from around the Windows 95/98 era.
+
+It’s very dated now, and it lacks some basic construction features that you’d expect from this sort of software. Things like constructing a PCD from circles, intersecting lines to create points, and other simple geometry tools either aren’t there or aren’t implemented in the way you’d expect.
+
+It’s not amazing software by modern standards, but that’s also kind of the point. It’s almost nowhere to be found online now. It’s completely obsolete, and it feels like the sort of thing that could easily be lost to time.
+
+I hate that idea, honestly.
+
+Software like this is part of the history of inspection and manufacturing. Even if it’s clunky, limited, or outdated, it still represents a stage in how these tools developed. I don’t just want to preserve the idea, I want to build on it and turn it into something genuinely useful on modern hardware.
+
+For now, I’m mainly targeting Windows and Android.
+
+The plan is to add the basic construction features that the old software lacks, which is a shame because I remember slightly later versions having more of this built in. But those versions were usually stuck on very old machines that had just survived from another era.
+
+The Windows version will run from a connected camera, ideally a USB microscope, although any camera can technically be used. Accuracy will obviously depend on the camera. A zoomed-in microscope camera should allow much better calibration of millimetres per pixel, which means more precise measurements.
+
+The idea is to make optical inspection accessible to more people. You shouldn’t need a massive investment just to measure something visually. A decent camera and some usable software should be enough for a lot of jobs.
+
+At the moment, I don’t have a stage that can interact with the software, so measurement is limited to a single image. Longer term, I want to look at the possibility of designing an open source frame that people could either build themselves or buy. If that could integrate with the software and camera, it would open up stage movement, image stitching, and more serious inspection workflows.
+
+![TesaTouch Reborn running on Android with a live camera view, crosshair overlay, and calibration controls](../assets/images/tesatouch-reborn-android-camera-05.07.26.jpg)
+
+This one still needs a lot more work. I also need to buy a microscope camera to properly test the Windows build. I’m looking forward to seeing what kind of accuracy I can get out of it and how reliable it ends up being.
+
+If it works well, it could become a cheap alternative for people who need to measure parts that aren’t held to extreme tolerances, but still need something quicker and better than guessing with a ruler.
+
+## Coordinate Measuring Dreams (CMD)
+
+Coordinate Measuring Dreams, or CMD, is the app I use at work and at home when I’m working on projects.
+
+It’s basically a collection of tools that make my life easier. I haven’t finished it by any stretch, but there are already a decent number of functions in there, and it’s really useful having them all in one place where I can access them quickly.
+
+![Coordinate Measuring Dreams home screen with quick access to metrology and CMM programming tools](../assets/images/cmd-home-screen-05.07.26.jpg)
+
+### IJK angle visualiser
+
+I can calculate angles to IJK values manually, but it’s a pain.
+
+When a drawing gives me the angle of a hole in degrees, I need to work out the IJK vector for the probe. Then I end up going back and forth between IJK values and degrees, which gets annoying very quickly.
+
+This tool lets me type in IJK values or specify an angle in XY or Z. It then shows the angle in a 3D viewer, which makes it much easier to understand what’s actually going on.
+
+It’s really handy for CMM inspection, and it speeds up specifying probe angles. The only one I ever really remember is 45 degrees being 0.7071, but that’s not enough when I’ve got 2.5 degree increments on the head.
+
+![CMD IJK Angle Visualiser showing a 3D axis view and converted I, J, and K vector values](../assets/images/cmd-ijk-angle-visualiser-05.07.26.jpg)
+
+### Model measure
+
+The model I’m given doesn’t always have a relevant dimension on the drawing to tell me where something is inspected from.
+
+For example, a circle might be located from a Z height, but the drawing doesn’t actually give me the dimension I need. This tool lets me import a model, currently OBJ and STL, and select two points on it. It then gives me the distance between them.
+
+It’s a simple tool, but having access to it on mobile is genuinely helpful.
+
+![CMD Model Measure tool showing an imported STL wireframe with two selected points and the measured distance between them](../assets/images/cmd-model-measure-05.07.26.jpg)
+
+### ISO tolerance tables
+
+I’m always having to look up tolerances.
+
+Designers absolutely love putting limit and fit values on drawings instead of actual tolerances. I understand why, but it adds an extra step for me, and I don’t like extra steps.
+
+So I made this.
+
+You specify whether it’s a hole or shaft, then enter the limit and fit letter and number. The app gives you the upper and lower limits.
+
+Nothing fancy, but it’s something I need nearly every day.
+
+![CMD ISO Tolerance Tables calculating limits for a 25 mm H7 hole](../assets/images/cmd-iso-tolerance-tables-05.07.26.jpg)
+
+### Trigonometry calculator
+
+This one exists everywhere, I know.
+
+But again, it helps having everything in one place. I don’t think this one needs much explaining. It’s a trig calculator, and sometimes that’s exactly what I need.
+
+![CMD Trigonometry Calculator solving a right triangle from an adjacent length and angle](../assets/images/cmd-trigonometry-calculator-05.07.26.jpg)
+
+### Probe shanking checker
+
+This tool lets me enter the probe diameter, shaft diameter, and shaft length for the CMM probe I’m using. It then calculates the angle I can get away with before I start shanking.
+
+This is especially useful when I need to get deep into a cylinder and I’m using a smaller ball. Rotation error can cause the shaft to touch the part the further in I go, so this gives me a quick way to check how much rotational angle I can safely use with that probe.
+
+It’s a very niche tool, but it saves me calculating the angles and lengths manually and then doing the trig myself.
+
+Just another tool that makes my life easier.
+
+![CMD Probe Angle Calculator showing stylus clearance geometry and the maximum safe angle before shanking](../assets/images/cmd-probe-angle-calculator-05.07.26.jpg)
+
+I do need to clean up the visualiser for this one, but I’ll get to it eventually.
+
+## That’s enough ranting for now
+
+There’s a lot going on at the moment, both in software and with a few physical projects too. I’ll do another update on those soon.
+
+For now, these are the main app development projects I’ve been working on: one for Minecraft builds, one for modernising old optical inspection ideas, and one that keeps slowly becoming my personal metrology toolbox.
+
+None of them are finished, but they’re all useful in their own way already, and that’s usually the point where a project starts to feel worth continuing.
+  </script>
+
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/post.js"></script>
+</body>
+</html>

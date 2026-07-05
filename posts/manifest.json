@@ -2,6 +2,11 @@
   "title": "Ween’s Projects",
   "posts": [
     {
+      "title": "App development",
+      "date": "05.07.26",
+      "path": "posts/app-development-05.07.26.html"
+    },
+    {
       "title": "CNC control with CNCjs, tool holders, and portable CAD",
       "date": "18.06.26",
       "path": "posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html"
