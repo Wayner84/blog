@@ -4,6 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Ween’s Projects</title>
+<!-- generated:shared-metadata:start -->
+  <meta name="description" content="About Wayne, the engineer and maker behind Ween’s Projects." />
+  <link rel="canonical" href="https://wayner84.github.io/blog/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About — Ween’s Projects" />
+  <meta property="og:description" content="About Wayne, the engineer and maker behind Ween’s Projects." />
+  <meta property="og:url" content="https://wayner84.github.io/blog/about.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="About — Ween’s Projects" />
+  <meta name="twitter:description" content="About Wayne, the engineer and maker behind Ween’s Projects." />
+<!-- generated:shared-metadata:end -->
+  <link rel="alternate" type="application/atom+xml" title="Ween’s Projects feed" href="./feed.xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +24,10 @@
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 <body>
-  <header class="header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="header">
     <div class="header-inner">
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-controls="drawer" aria-expanded="false" aria-label="Open menu">
         <div class="lines" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
@@ -30,8 +43,8 @@
   </header>
 
   <!-- Drawer -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="drawer" id="drawer" aria-label="Site menu">
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
     <div class="drawer-header">
       <div class="drawer-title">Menu</div>
       <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
@@ -40,7 +53,7 @@
     <div class="drawer-content">
       <div class="nav-section">
         <div class="nav-label">Start here</div>
-        <a class="nav-link" href="./about.html">
+        <a class="nav-link" href="./about.html" aria-current="page">
           <div>
             <div class="name">About me</div>
             <div class="meta">you are here</div>
@@ -51,12 +64,77 @@
 
       <div class="nav-section">
         <div class="nav-label">Posts (newest first)</div>
-        <div id="drawer-posts"></div>
+        <div id="drawer-posts">
+          <a class="nav-link" href="./posts/app-development-05.07.26.html">
+            <div><div class="name">App development</div><div class="meta"><time datetime="2026-07-05">05.07.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html">
+            <div><div class="name">CNC control with CNCjs, tool holders, and portable CAD</div><div class="meta"><time datetime="2026-06-18">18.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/more-cnc-16.06.26.html">
+            <div><div class="name">MORE CNC!</div><div class="meta"><time datetime="2026-06-16">16.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/cnc-first-actual-test-09.06.26.html">
+            <div><div class="name">CNC first actual test</div><div class="meta"><time datetime="2026-06-09">09.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html">
+            <div><div class="name">Docker Containers I've found helpful and a new AI agent</div><div class="meta"><time datetime="2026-05-25">25.05.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/busy-busy-busy-28.04.26.html">
+            <div><div class="name">Busy busy busy</div><div class="meta"><time datetime="2026-04-28">28.04.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/resin-machining-compatibility-25.03.26.html">
+            <div><div class="name">Resin machining compatibility</div><div class="meta"><time datetime="2026-03-25">25.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/vee-block-progress-and-multi-board-18.03.26.html">
+            <div><div class="name">Vee block progress and multi board</div><div class="meta"><time datetime="2026-03-18">18.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/good-thread-test-results-10.03.26.html">
+            <div><div class="name">Good thread test results!</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/working-with-what-ive-got-10.03.26.html">
+            <div><div class="name">Working with what I’ve got</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/when-life-gives-you-lemons-04.03.26.html">
+            <div><div class="name">When life gives you lemons</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/muft-upgrade-04.03.26.html">
+            <div><div class="name">MUFT upgrade</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/so-much-prototyping-01.03.26.html">
+            <div><div class="name">So much prototyping</div><div class="meta"><time datetime="2026-03-01">01.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html">
+            <div><div class="name">Vee block clamp results and calliper holder</div><div class="meta"><time datetime="2026-02-16">16.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/vee-block-clamp-tests-14.02.26.html">
+            <div><div class="name">Vee Block Clamp Tests</div><div class="meta"><time datetime="2026-02-14">14.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="./posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html">
+            <div><div class="name">Vee Blocks, Resin Suction Forces and Logging</div><div class="meta"><time datetime="2026-02-10">10.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+        </div>
       </div>
     </div>
   </aside>
 
-  <main class="container">
+  <main class="container" id="main-content" tabindex="-1">
     <section class="hero">
       <h1>About me</h1>
       <p>

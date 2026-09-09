@@ -3,7 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Post — Ween’s Projects</title>
+  <title>Vee Blocks, Resin Suction Forces and Logging — Ween’s Projects</title>
+  <link rel="alternate" type="application/atom+xml" title="Ween’s Projects feed" href="../feed.xml" />
+<!-- generated:post-metadata:start -->
+  <meta name="description" content="What I worked on First prototype of vee blocks A roughandready resin peel / suction force estimator for MSLA prints (mainly to explore the idea of support…" />
+  <link rel="canonical" href="https://wayner84.github.io/blog/posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Vee Blocks, Resin Suction Forces and Logging" />
+  <meta property="og:description" content="What I worked on First prototype of vee blocks A roughandready resin peel / suction force estimator for MSLA prints (mainly to explore the idea of support…" />
+  <meta property="og:url" content="https://wayner84.github.io/blog/posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html" />
+  <meta property="og:image" content="https://wayner84.github.io/blog/assets/images/vee-blocks-print.jpg" />
+  <meta property="article:published_time" content="2026-02-10" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vee Blocks, Resin Suction Forces and Logging" />
+  <meta name="twitter:description" content="What I worked on First prototype of vee blocks A roughandready resin peel / suction force estimator for MSLA prints (mainly to explore the idea of support…" />
+  <meta name="twitter:image" content="https://wayner84.github.io/blog/assets/images/vee-blocks-print.jpg" />
+<!-- generated:post-metadata:end -->
 
   <!-- This slug lets post.js find this entry in manifest.json -->
   <meta name="post:slug" content="vee-blocks-resin-suction-forces-and-logging-10.02.26.html" />
@@ -13,14 +28,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/styles.css" />
-
-  <!-- Markdown renderer (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <header class="header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="header">
     <div class="header-inner">
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-controls="drawer" aria-expanded="false" aria-label="Open menu">
         <div class="lines" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
@@ -36,8 +49,8 @@
   </header>
 
   <!-- Drawer -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="drawer" id="drawer" aria-label="Site menu">
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
     <div class="drawer-header">
       <div class="drawer-title">Menu</div>
       <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
@@ -57,27 +70,131 @@
 
       <div class="nav-section">
         <div class="nav-label">Posts (newest first)</div>
-        <div id="drawer-posts"></div>
+        <div id="drawer-posts">
+          <a class="nav-link" href="../posts/app-development-05.07.26.html">
+            <div><div class="name">App development</div><div class="meta"><time datetime="2026-07-05">05.07.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html">
+            <div><div class="name">CNC control with CNCjs, tool holders, and portable CAD</div><div class="meta"><time datetime="2026-06-18">18.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/more-cnc-16.06.26.html">
+            <div><div class="name">MORE CNC!</div><div class="meta"><time datetime="2026-06-16">16.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-first-actual-test-09.06.26.html">
+            <div><div class="name">CNC first actual test</div><div class="meta"><time datetime="2026-06-09">09.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html">
+            <div><div class="name">Docker Containers I've found helpful and a new AI agent</div><div class="meta"><time datetime="2026-05-25">25.05.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/busy-busy-busy-28.04.26.html">
+            <div><div class="name">Busy busy busy</div><div class="meta"><time datetime="2026-04-28">28.04.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/resin-machining-compatibility-25.03.26.html">
+            <div><div class="name">Resin machining compatibility</div><div class="meta"><time datetime="2026-03-25">25.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-progress-and-multi-board-18.03.26.html">
+            <div><div class="name">Vee block progress and multi board</div><div class="meta"><time datetime="2026-03-18">18.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/good-thread-test-results-10.03.26.html">
+            <div><div class="name">Good thread test results!</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/working-with-what-ive-got-10.03.26.html">
+            <div><div class="name">Working with what I’ve got</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/when-life-gives-you-lemons-04.03.26.html">
+            <div><div class="name">When life gives you lemons</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/muft-upgrade-04.03.26.html">
+            <div><div class="name">MUFT upgrade</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/so-much-prototyping-01.03.26.html">
+            <div><div class="name">So much prototyping</div><div class="meta"><time datetime="2026-03-01">01.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html">
+            <div><div class="name">Vee block clamp results and calliper holder</div><div class="meta"><time datetime="2026-02-16">16.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-tests-14.02.26.html">
+            <div><div class="name">Vee Block Clamp Tests</div><div class="meta"><time datetime="2026-02-14">14.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html" aria-current="page">
+            <div><div class="name">Vee Blocks, Resin Suction Forces and Logging</div><div class="meta"><time datetime="2026-02-10">10.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+        </div>
       </div>
     </div>
   </aside>
 
-  <main class="container">
+  <main class="container" id="main-content" tabindex="-1">
     <article class="card">
       <div class="card-inner">
-        <h1 class="post-title" id="post-title">Loading…</h1>
+        <h1 class="post-title" id="post-title">Vee Blocks, Resin Suction Forces and Logging</h1>
         <div class="post-meta">
-          <span class="pill">10.02.26</span>
-          <span class="pill">Vee Blocks</span>
-          <span class="pill">Resin Suction Sim</span>
+          <time class="pill" id="post-date" datetime="2026-02-10">10.02.26</time>
         </div>
 
-        <div class="markdown" id="post-content"></div>
+        <div class="markdown" id="post-content">
+<h2>What I worked on</h2>
+<ul>
+<li>First prototype of <strong>vee blocks</strong></li>
+<li>A rough-and-ready <strong>resin peel / suction force estimator</strong> for MSLA prints (mainly to explore the idea of support generation that considers <em>forces</em>, not just geometry)</li>
+</ul>
+<hr>
+<h2>What’s the goal?</h2>
+<p>I’ve had issues getting a completely perpendicular face on the surface that faces the bed on my Saturn 3 Ultra.</p>
+<ul>
+<li>The opposing face is perfect and flat within <strong>50 microns</strong> (measuring 24 points on a CMM)</li>
+<li>The vee itself measures <strong>90.0018°</strong> — basically perfect</li>
+<li>But the bottom face shows scarring and issues with warping</li>
+</ul>
+<p>This was using the auto support generation in Elegoo SatelLite.</p>
+<p>Since then I ran a second trial where I rotated the part <strong>20° in Rx</strong> and <strong>7° in Ry</strong>, again with auto supports, to see whether orientation helps with the large cross‑sectional suction forces.</p>
+<p>Because it’s solid, it’s hard to minimise suction area completely — a big chunk of the model is always going to be “doing work” each layer.</p>
+<p>Unfortunately the second run warped badly and even had a slight layer shift. Past the layer shift the print came out perfect, which (to me) points to <strong>insufficient support</strong> earlier on.</p>
+<p><img src="../assets/images/vee-blocks-print.jpg" alt="Vee block prints — first prototype and surface issues" width="1600" height="900" loading="eager" decoding="async" fetchpriority="high"></p>
+<hr>
+<h2>Next steps</h2>
+<p>Auto supports can be great, but they aren’t as mature as the FDM world where support generation has had loads of time + open-source iteration.</p>
+<p>For the next test I’m going to go <strong>manual supports</strong>, even if it’s a pain — and I’ll live with that while I think about something more permanent.</p>
+<hr>
+<h2>Suction forces (the side quest)</h2>
+<p>This started as a shower thought: simulate the suction forces a printer experiences across layers/regions, with the long-term goal of building an open-source support generator that considers <strong>layer forces</strong>, not just geometry.</p>
+<p>I messaged Clawdbot to quickly put together something that could estimate suction forces for a given STL. I didn’t do a ton of research up front (so I didn’t exactly give it the perfect brief), but it still produced a decent “per-layer” force model.</p>
+<p>I still need to:</p>
+<ul>
+<li>properly review the code</li>
+<li>understand the Stefan model end-to-end</li>
+<li>figure out how to incorporate the FEP’s behaviour (no vat tilting on my setup)</li>
+</ul>
+<p><img src="../assets/images/resin-suction-force-plot.jpg" alt="Estimated peel/suction force across Z (quick sim output)" width="2000" height="800" loading="lazy" decoding="async"></p>
+<p>The output looks OK, but it needs to become something that <em>actually helps</em> support generation.
+Right now it mostly tells me what I already know (even though it’s useful to have it quantified).</p>
+<p>This is something I want to keep working on for large-scale manufacturing reliability — but the immediate focus is still a perfect vee block I can sell.</p>
+<hr>
+<h2>Why I’m logging all this</h2>
+<p>I do a lot of random (sometimes useful) work. I want to get better at sharing what I learn — and keeping a central place I can point people to.</p>
+<p>Either way: thanks for the read.</p>
+        </div>
       </div>
 
       <div class="footer-nav">
-        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
-        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+        <span class="btn" id="btn-prev" aria-disabled="true"><span aria-hidden="true">←</span> <span data-label>Previous</span></span>
+        <a class="btn" id="btn-next" href="../posts/vee-block-clamp-tests-14.02.26.html"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
       </div>
     </article>
   </main>

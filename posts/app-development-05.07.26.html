@@ -3,7 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Post — Ween’s Projects</title>
+  <title>App development — Ween’s Projects</title>
+  <link rel="alternate" type="application/atom+xml" title="Ween’s Projects feed" href="../feed.xml" />
+<!-- generated:post-metadata:start -->
+  <meta name="description" content="I’ve had quite a lot of development work going on recently, so I thought it was probably time to put a few of the projects in one place and talk about…" />
+  <link rel="canonical" href="https://wayner84.github.io/blog/posts/app-development-05.07.26.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="App development" />
+  <meta property="og:description" content="I’ve had quite a lot of development work going on recently, so I thought it was probably time to put a few of the projects in one place and talk about…" />
+  <meta property="og:url" content="https://wayner84.github.io/blog/posts/app-development-05.07.26.html" />
+  <meta property="og:image" content="https://wayner84.github.io/blog/assets/images/minecraft-schematic-studio-home-05.07.26.jpg" />
+  <meta property="article:published_time" content="2026-07-05" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="App development" />
+  <meta name="twitter:description" content="I’ve had quite a lot of development work going on recently, so I thought it was probably time to put a few of the projects in one place and talk about…" />
+  <meta name="twitter:image" content="https://wayner84.github.io/blog/assets/images/minecraft-schematic-studio-home-05.07.26.jpg" />
+<!-- generated:post-metadata:end -->
 
   <!-- This slug lets post.js find this entry in manifest.json -->
   <meta name="post:slug" content="app-development-05.07.26.html" />
@@ -13,14 +28,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/styles.css" />
-
-  <!-- Markdown renderer (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <header class="header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="header">
     <div class="header-inner">
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-controls="drawer" aria-expanded="false" aria-label="Open menu">
         <div class="lines" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
@@ -36,8 +49,8 @@
   </header>
 
   <!-- Drawer -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="drawer" id="drawer" aria-label="Site menu">
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
     <div class="drawer-header">
       <div class="drawer-title">Menu</div>
       <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
@@ -57,29 +70,162 @@
 
       <div class="nav-section">
         <div class="nav-label">Posts (newest first)</div>
-        <div id="drawer-posts"></div>
+        <div id="drawer-posts">
+          <a class="nav-link" href="../posts/app-development-05.07.26.html" aria-current="page">
+            <div><div class="name">App development</div><div class="meta"><time datetime="2026-07-05">05.07.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html">
+            <div><div class="name">CNC control with CNCjs, tool holders, and portable CAD</div><div class="meta"><time datetime="2026-06-18">18.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/more-cnc-16.06.26.html">
+            <div><div class="name">MORE CNC!</div><div class="meta"><time datetime="2026-06-16">16.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-first-actual-test-09.06.26.html">
+            <div><div class="name">CNC first actual test</div><div class="meta"><time datetime="2026-06-09">09.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html">
+            <div><div class="name">Docker Containers I've found helpful and a new AI agent</div><div class="meta"><time datetime="2026-05-25">25.05.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/busy-busy-busy-28.04.26.html">
+            <div><div class="name">Busy busy busy</div><div class="meta"><time datetime="2026-04-28">28.04.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/resin-machining-compatibility-25.03.26.html">
+            <div><div class="name">Resin machining compatibility</div><div class="meta"><time datetime="2026-03-25">25.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-progress-and-multi-board-18.03.26.html">
+            <div><div class="name">Vee block progress and multi board</div><div class="meta"><time datetime="2026-03-18">18.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/good-thread-test-results-10.03.26.html">
+            <div><div class="name">Good thread test results!</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/working-with-what-ive-got-10.03.26.html">
+            <div><div class="name">Working with what I’ve got</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/when-life-gives-you-lemons-04.03.26.html">
+            <div><div class="name">When life gives you lemons</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/muft-upgrade-04.03.26.html">
+            <div><div class="name">MUFT upgrade</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/so-much-prototyping-01.03.26.html">
+            <div><div class="name">So much prototyping</div><div class="meta"><time datetime="2026-03-01">01.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html">
+            <div><div class="name">Vee block clamp results and calliper holder</div><div class="meta"><time datetime="2026-02-16">16.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-tests-14.02.26.html">
+            <div><div class="name">Vee Block Clamp Tests</div><div class="meta"><time datetime="2026-02-14">14.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html">
+            <div><div class="name">Vee Blocks, Resin Suction Forces and Logging</div><div class="meta"><time datetime="2026-02-10">10.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+        </div>
       </div>
     </div>
   </aside>
 
-  <main class="container">
+  <main class="container" id="main-content" tabindex="-1">
     <article class="card">
       <div class="card-inner">
-        <h1 class="post-title" id="post-title">Loading…</h1>
+        <h1 class="post-title" id="post-title">App development</h1>
         <div class="post-meta">
-          <span class="pill">05.07.26</span>
-          <span class="pill">Apps</span>
-          <span class="pill">Minecraft</span>
-          <span class="pill">Metrology</span>
-          <span class="pill">Android</span>
+          <time class="pill" id="post-date" datetime="2026-07-05">05.07.26</time>
         </div>
 
-        <div class="markdown" id="post-content"></div>
+        <div class="markdown" id="post-content">
+<p>I’ve had quite a lot of development work going on recently, so I thought it was probably time to put a few of the projects in one place and talk about what I’ve been building.</p>
+<p>Some of these are already useful, some are still very rough, and a few are more about preserving old ideas before they disappear completely. Either way, they all come from the same place: I keep running into small annoyances, missing tools, or old bits of software that should exist in a better form, so I end up trying to build them.</p>
+<h2>Minecraft schematic studio</h2>
+<p>The first app I want to mention is something I’ve had the idea for quite some time, but never properly got around to building: an editor for Minecraft schematics.</p>
+<p>The basic idea is that you can plan builds before having to build them in-game, then view them later layer by layer while recreating them in the world. I know Litematica already exists, but not for Bedrock, and that’s really where this started for me.</p>
+<p>I wanted a way to design Minecraft builds on the go without needing to load up a creative world, grab a controller, and do everything inside the game. A layer by layer view also makes it much easier to recreate Litematica designs in Bedrock, especially when you’re working from something large or detailed.</p>
+<p><img src="../assets/images/minecraft-schematic-studio-home-05.07.26.jpg" alt="Minecraft Schematic Studio start screen with options for new designs, opening designs, importing Litematica files, and settings" width="600" height="1304" loading="eager" decoding="async" fetchpriority="high"></p>
+<p>The start screen lets you create a new design, load an existing one, or immediately import a .litematica file. Full Litematica support is something I really want for this app, partly because it allows Java players to import into the game, but also because there are already so many user-created designs out there. Being able to import those and view them layer by layer for recreation in Bedrock is a big part of the point.</p>
+<p>There is one awkward issue though: textures.</p>
+<p>Minecraft’s textures are owned by Microsoft, so the default textures in the app are just random generated ones. I’m pretty sure I used Python to generate them originally, but either way, I can’t include the real Minecraft textures by default. Microsoft would definitely not be happy about that.</p>
+<p>What I can do is allow texture pack importing. So if you use a Java texture pack, you can import it yourself and the app will use those textures. Technically that means you can import the default pack, I just can’t provide it.</p>
+<p>It also means you can import whatever texture pack you use in-game, so the designs in the app can match how your world actually looks.</p>
+<p><img src="../assets/images/minecraft-schematic-studio-settings-05.07.26.jpg" alt="Minecraft Schematic Studio settings screen showing dark mode, texture pack import, texture source reset, and design save directory options" width="600" height="1304" loading="lazy" decoding="async"></p>
+<p>You can switch between dark mode and light mode too, although I’m still not really sure why anyone would want to leave dark mode.</p>
+<p><img src="../assets/images/minecraft-schematic-studio-build-screen-05.07.26.jpg" alt="Minecraft Schematic Studio build screen with a 3D preview, layer controls, drawing tools, grid editor, and customisable hotbar" width="600" height="1304" loading="lazy" decoding="async"></p>
+<p>The block set was the one I regarded as current when I wrote this on 5 July 2026; I did not record the exact game version here. Check the <a href="https://github.com/Wayner84/minecraft-schematic-studio-mobile">project repository</a> for current compatibility, releases, and issues.</p>
+<p>There’s a hotbar at the bottom, and long pressing a slot lets you change the block, so you can customise it around whatever you’re building. Not all of the textures are perfect yet, but enough of it works now that the app is genuinely usable. You can import and edit Litematica files, build designs, and use the layer view to help recreate them.</p>
+<p>I’ll keep adding features and improving the design workflow, but I’m really proud that this actually works. It’s one of those apps that came from a very specific personal annoyance, and now it’s something that makes my life easier.</p>
+<p>The web and Android app is available here:</p>
+<p><a href="https://github.com/Wayner84/minecraft-schematic-studio-mobile">https://github.com/Wayner84/minecraft-schematic-studio-mobile</a></p>
+<h2>TesaTouch</h2>
+<p>TesaTouch is a legacy piece of optical inspection software from around the Windows 95/98 era.</p>
+<p>It’s very dated now, and it lacks some basic construction features that you’d expect from this sort of software. Things like constructing a PCD from circles, intersecting lines to create points, and other simple geometry tools either aren’t there or aren’t implemented in the way you’d expect.</p>
+<p>It’s not amazing software by modern standards, but that’s also kind of the point. It’s almost nowhere to be found online now. It’s completely obsolete, and it feels like the sort of thing that could easily be lost to time.</p>
+<p>I hate that idea, honestly.</p>
+<p>Software like this is part of the history of inspection and manufacturing. Even if it’s clunky, limited, or outdated, it still represents a stage in how these tools developed. I don’t just want to preserve the idea, I want to build on it and turn it into something genuinely useful on modern hardware.</p>
+<p>For now, I’m mainly targeting Windows and Android.</p>
+<p>The plan is to add the basic construction features that the old software lacks, which is a shame because I remember slightly later versions having more of this built in. But those versions were usually stuck on very old machines that had just survived from another era.</p>
+<p>The Windows version will run from a connected camera, ideally a USB microscope, although any camera can technically be used. Measurement performance will depend on more than resolution or magnification: calibration, optics, lighting, geometry, stability, software, and validation against suitable references all matter. I have not established a general accuracy specification.</p>
+<p>The idea is to make optical inspection accessible to more people. You shouldn’t need a massive investment just to measure something visually. A decent camera and some usable software should be enough for a lot of jobs.</p>
+<p>At the moment, I don’t have a stage that can interact with the software, so measurement is limited to a single image. Longer term, I want to look at the possibility of designing an open source frame that people could either build themselves or buy. If that could integrate with the software and camera, it would open up stage movement, image stitching, and more serious inspection workflows.</p>
+<p><img src="../assets/images/tesatouch-reborn-android-camera-05.07.26.jpg" alt="TesaTouch Reborn running on Android with a live camera view, crosshair overlay, and calibration controls" width="600" height="1304" loading="lazy" decoding="async"></p>
+<p>This one still needs a lot more work. I also need to buy a microscope camera to properly test the Windows build. I’m looking forward to seeing what kind of accuracy I can get out of it and how reliable it ends up being.</p>
+<p>If it works well, it could become a cheap alternative for people who need to measure parts that aren’t held to extreme tolerances, but still need something quicker and better than guessing with a ruler.</p>
+<h2>Coordinate Measuring Dreams (CMD)</h2>
+<p>Coordinate Measuring Dreams, or CMD, is the app I use at work and at home when I’m working on projects.</p>
+<p>It’s basically a collection of tools that make my life easier. I haven’t finished it by any stretch, but there are already a decent number of functions in there, and it’s really useful having them all in one place where I can access them quickly.</p>
+<p><img src="../assets/images/cmd-home-screen-05.07.26.jpg" alt="Coordinate Measuring Dreams home screen with quick access to metrology and CMM programming tools" width="600" height="1304" loading="lazy" decoding="async"></p>
+<h3>IJK angle visualiser</h3>
+<p>I can calculate angles to IJK values manually, but it’s a pain.</p>
+<p>When a drawing gives me the angle of a hole in degrees, I need to work out the IJK vector for the probe. Then I end up going back and forth between IJK values and degrees, which gets annoying very quickly.</p>
+<p>This tool lets me type in IJK values or specify an angle in XY or Z. It then shows the angle in a 3D viewer, which makes it much easier to understand what’s actually going on.</p>
+<p>It’s really handy for CMM inspection, and it speeds up specifying probe angles. The only one I ever really remember is 45 degrees being 0.7071, but that’s not enough when I’ve got 2.5 degree increments on the head.</p>
+<p><img src="../assets/images/cmd-ijk-angle-visualiser-05.07.26.jpg" alt="CMD IJK Angle Visualiser showing a 3D axis view and converted I, J, and K vector values" width="600" height="1304" loading="lazy" decoding="async"></p>
+<h3>Model measure</h3>
+<p>The model I’m given doesn’t always have a relevant dimension on the drawing to tell me where something is inspected from.</p>
+<p>For example, a circle might be located from a Z height, but the drawing doesn’t actually give me the dimension I need. This tool lets me import a model, currently OBJ and STL, and select two points on it. It then gives me the distance between them.</p>
+<p>It’s a simple tool, but having access to it on mobile is genuinely helpful.</p>
+<p><img src="../assets/images/cmd-model-measure-05.07.26.jpg" alt="CMD Model Measure tool showing an imported STL wireframe with two selected points and the measured distance between them" width="600" height="1304" loading="lazy" decoding="async"></p>
+<h3>ISO tolerance tables</h3>
+<p>I’m always having to look up tolerances.</p>
+<p>Designers absolutely love putting limit and fit values on drawings instead of actual tolerances. I understand why, but it adds an extra step for me, and I don’t like extra steps.</p>
+<p>So I made this.</p>
+<p>You specify whether it’s a hole or shaft, then enter the limit and fit letter and number. The app gives you the upper and lower limits.</p>
+<p>Nothing fancy, but it’s something I need nearly every day.</p>
+<p><img src="../assets/images/cmd-iso-tolerance-tables-05.07.26.jpg" alt="CMD ISO Tolerance Tables calculating limits for a 25 mm H7 hole" width="600" height="1304" loading="lazy" decoding="async"></p>
+<h3>Trigonometry calculator</h3>
+<p>This one exists everywhere, I know.</p>
+<p>But again, it helps having everything in one place. I don’t think this one needs much explaining. It’s a trig calculator, and sometimes that’s exactly what I need.</p>
+<p><img src="../assets/images/cmd-trigonometry-calculator-05.07.26.jpg" alt="CMD Trigonometry Calculator solving a right triangle from an adjacent length and angle" width="600" height="1304" loading="lazy" decoding="async"></p>
+<h3>Probe shanking checker</h3>
+<p>This tool lets me enter the probe diameter, shaft diameter, and shaft length for the CMM probe I’m using. It then gives me a geometric estimate of the clearance angle before the shaft could reach the part.</p>
+<p>This is especially useful when I need to get deep into a cylinder and I’m using a smaller ball. Rotation error can cause the shaft to touch the part the further in I go, so I use the result as a planning aid and still verify the real setup and clearance before running a measurement.</p>
+<p>It’s a very niche tool, but it saves me calculating the angles and lengths manually and then doing the trig myself.</p>
+<p>Just another tool that makes my life easier.</p>
+<p><img src="../assets/images/cmd-probe-angle-calculator-05.07.26.jpg" alt="CMD Probe Angle Calculator showing a geometric estimate of stylus clearance before potential shanking" width="600" height="1304" loading="lazy" decoding="async"></p>
+<p>I do need to clean up the visualiser for this one, but I’ll get to it eventually.</p>
+<h2>That’s enough ranting for now</h2>
+<p>There’s a lot going on at the moment, both in software and with a few physical projects too. I’ll do another update on those soon.</p>
+<p>For now, these are the main app development projects I’ve been working on: one for Minecraft builds, one for modernising old optical inspection ideas, and one that keeps slowly becoming my personal metrology toolbox.</p>
+<p>None of them are finished, but they’re all useful in their own way already, and that’s usually the point where a project starts to feel worth continuing.</p>
+        </div>
       </div>
 
       <div class="footer-nav">
-        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
-        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+        <a class="btn" id="btn-prev" href="../posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <span class="btn" id="btn-next" aria-disabled="true"><span data-label>Next</span> <span aria-hidden="true">→</span></span>
       </div>
     </article>
   </main>
@@ -117,7 +263,7 @@ You can switch between dark mode and light mode too, although I’m still not re
 
 ![Minecraft Schematic Studio build screen with a 3D preview, layer controls, drawing tools, grid editor, and customisable hotbar](../assets/images/minecraft-schematic-studio-build-screen-05.07.26.jpg)
 
-The app should have all the blocks from the current version of Minecraft. If it doesn’t, submit an issue on GitHub and I’ll get it sorted.
+The block set was the one I regarded as current when I wrote this on 5 July 2026; I did not record the exact game version here. Check the [project repository](https://github.com/Wayner84/minecraft-schematic-studio-mobile) for current compatibility, releases, and issues.
 
 There’s a hotbar at the bottom, and long pressing a slot lets you change the block, so you can customise it around whatever you’re building. Not all of the textures are perfect yet, but enough of it works now that the app is genuinely usable. You can import and edit Litematica files, build designs, and use the layer view to help recreate them.
 
@@ -143,7 +289,7 @@ For now, I’m mainly targeting Windows and Android.
 
 The plan is to add the basic construction features that the old software lacks, which is a shame because I remember slightly later versions having more of this built in. But those versions were usually stuck on very old machines that had just survived from another era.
 
-The Windows version will run from a connected camera, ideally a USB microscope, although any camera can technically be used. Accuracy will obviously depend on the camera. A zoomed-in microscope camera should allow much better calibration of millimetres per pixel, which means more precise measurements.
+The Windows version will run from a connected camera, ideally a USB microscope, although any camera can technically be used. Measurement performance will depend on more than resolution or magnification: calibration, optics, lighting, geometry, stability, software, and validation against suitable references all matter. I have not established a general accuracy specification.
 
 The idea is to make optical inspection accessible to more people. You shouldn’t need a massive investment just to measure something visually. A decent camera and some usable software should be enough for a lot of jobs.
 
@@ -209,15 +355,15 @@ But again, it helps having everything in one place. I don’t think this one nee
 
 ### Probe shanking checker
 
-This tool lets me enter the probe diameter, shaft diameter, and shaft length for the CMM probe I’m using. It then calculates the angle I can get away with before I start shanking.
+This tool lets me enter the probe diameter, shaft diameter, and shaft length for the CMM probe I’m using. It then gives me a geometric estimate of the clearance angle before the shaft could reach the part.
 
-This is especially useful when I need to get deep into a cylinder and I’m using a smaller ball. Rotation error can cause the shaft to touch the part the further in I go, so this gives me a quick way to check how much rotational angle I can safely use with that probe.
+This is especially useful when I need to get deep into a cylinder and I’m using a smaller ball. Rotation error can cause the shaft to touch the part the further in I go, so I use the result as a planning aid and still verify the real setup and clearance before running a measurement.
 
 It’s a very niche tool, but it saves me calculating the angles and lengths manually and then doing the trig myself.
 
 Just another tool that makes my life easier.
 
-![CMD Probe Angle Calculator showing stylus clearance geometry and the maximum safe angle before shanking](../assets/images/cmd-probe-angle-calculator-05.07.26.jpg)
+![CMD Probe Angle Calculator showing a geometric estimate of stylus clearance before potential shanking](../assets/images/cmd-probe-angle-calculator-05.07.26.jpg)
 
 I do need to clean up the visualiser for this one, but I’ll get to it eventually.
 

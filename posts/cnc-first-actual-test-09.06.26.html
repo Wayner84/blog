@@ -3,7 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Post — Ween’s Projects</title>
+  <title>CNC first actual test — Ween’s Projects</title>
+  <link rel="alternate" type="application/atom+xml" title="Ween’s Projects feed" href="../feed.xml" />
+<!-- generated:post-metadata:start -->
+  <meta name="description" content="Even though I’m using the CNC for cleaning up the faces of the vee blocks, CNC is still pretty new to me. I know of it, and I know some terminology and…" />
+  <link rel="canonical" href="https://wayner84.github.io/blog/posts/cnc-first-actual-test-09.06.26.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="CNC first actual test" />
+  <meta property="og:description" content="Even though I’m using the CNC for cleaning up the faces of the vee blocks, CNC is still pretty new to me. I know of it, and I know some terminology and…" />
+  <meta property="og:url" content="https://wayner84.github.io/blog/posts/cnc-first-actual-test-09.06.26.html" />
+  <meta property="og:image" content="https://wayner84.github.io/blog/assets/images/cnc-first-actual-test-climb-vs-conventional-09.06.26.jpg" />
+  <meta property="article:published_time" content="2026-06-09" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CNC first actual test" />
+  <meta name="twitter:description" content="Even though I’m using the CNC for cleaning up the faces of the vee blocks, CNC is still pretty new to me. I know of it, and I know some terminology and…" />
+  <meta name="twitter:image" content="https://wayner84.github.io/blog/assets/images/cnc-first-actual-test-climb-vs-conventional-09.06.26.jpg" />
+<!-- generated:post-metadata:end -->
 
   <!-- This slug lets post.js find this entry in manifest.json -->
   <meta name="post:slug" content="cnc-first-actual-test-09.06.26.html" />
@@ -13,14 +28,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/styles.css" />
-
-  <!-- Markdown renderer (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <header class="header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="header">
     <div class="header-inner">
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-controls="drawer" aria-expanded="false" aria-label="Open menu">
         <div class="lines" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
@@ -36,8 +49,8 @@
   </header>
 
   <!-- Drawer -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="drawer" id="drawer" aria-label="Site menu">
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
     <div class="drawer-header">
       <div class="drawer-title">Menu</div>
       <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
@@ -57,29 +70,111 @@
 
       <div class="nav-section">
         <div class="nav-label">Posts (newest first)</div>
-        <div id="drawer-posts"></div>
+        <div id="drawer-posts">
+          <a class="nav-link" href="../posts/app-development-05.07.26.html">
+            <div><div class="name">App development</div><div class="meta"><time datetime="2026-07-05">05.07.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html">
+            <div><div class="name">CNC control with CNCjs, tool holders, and portable CAD</div><div class="meta"><time datetime="2026-06-18">18.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/more-cnc-16.06.26.html">
+            <div><div class="name">MORE CNC!</div><div class="meta"><time datetime="2026-06-16">16.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-first-actual-test-09.06.26.html" aria-current="page">
+            <div><div class="name">CNC first actual test</div><div class="meta"><time datetime="2026-06-09">09.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html">
+            <div><div class="name">Docker Containers I've found helpful and a new AI agent</div><div class="meta"><time datetime="2026-05-25">25.05.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/busy-busy-busy-28.04.26.html">
+            <div><div class="name">Busy busy busy</div><div class="meta"><time datetime="2026-04-28">28.04.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/resin-machining-compatibility-25.03.26.html">
+            <div><div class="name">Resin machining compatibility</div><div class="meta"><time datetime="2026-03-25">25.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-progress-and-multi-board-18.03.26.html">
+            <div><div class="name">Vee block progress and multi board</div><div class="meta"><time datetime="2026-03-18">18.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/good-thread-test-results-10.03.26.html">
+            <div><div class="name">Good thread test results!</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/working-with-what-ive-got-10.03.26.html">
+            <div><div class="name">Working with what I’ve got</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/when-life-gives-you-lemons-04.03.26.html">
+            <div><div class="name">When life gives you lemons</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/muft-upgrade-04.03.26.html">
+            <div><div class="name">MUFT upgrade</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/so-much-prototyping-01.03.26.html">
+            <div><div class="name">So much prototyping</div><div class="meta"><time datetime="2026-03-01">01.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html">
+            <div><div class="name">Vee block clamp results and calliper holder</div><div class="meta"><time datetime="2026-02-16">16.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-tests-14.02.26.html">
+            <div><div class="name">Vee Block Clamp Tests</div><div class="meta"><time datetime="2026-02-14">14.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html">
+            <div><div class="name">Vee Blocks, Resin Suction Forces and Logging</div><div class="meta"><time datetime="2026-02-10">10.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+        </div>
       </div>
     </div>
   </aside>
 
-  <main class="container">
+  <main class="container" id="main-content" tabindex="-1">
     <article class="card">
       <div class="card-inner">
-        <h1 class="post-title" id="post-title">Loading…</h1>
+        <h1 class="post-title" id="post-title">CNC first actual test</h1>
         <div class="post-meta">
-          <span class="pill">09.06.26</span>
-          <span class="pill">Vee Blocks</span>
-          <span class="pill">CNC</span>
-          <span class="pill">Machining</span>
-          <span class="pill">Learning</span>
+          <time class="pill" id="post-date" datetime="2026-06-09">09.06.26</time>
         </div>
 
-        <div class="markdown" id="post-content"></div>
+        <div class="markdown" id="post-content">
+<p>Even though I’m using the CNC for cleaning up the faces of the vee blocks, CNC is still pretty new to me. I know of it, and I know some terminology and techniques, but nothing like my CMM ability. It does help that they are a little similar, as they both use Cartesian coordinate systems, but the actual functions vary massively.</p>
+<p>For example, there’s climb and conventional milling. Which side you cut the material from makes a difference to surface finish, quality, and even size.</p>
+<p><img src="../assets/images/cnc-first-actual-test-climb-vs-conventional-09.06.26.jpg" alt="Simple diagram showing climb milling vs conventional milling" width="800" height="400" loading="eager" decoding="async" fetchpriority="high"></p>
+<p>Not only that, there’s loads to consider: speeds, feeds, stepdown, stepover, coolant or not, and plenty more. I could go on forever, because there is so much that controls how a CNC performs the cut. Even tool definitions can be complicated for a newbie.</p>
+<p>Anyone who knows me knows that when I see something I have no idea about, I personally take that as a challenge. Plus it would be advantageous to understand machining techniques, since I’m the one measuring the result. This could help with defining how to check a feature within inspection.</p>
+<p>I’m not going to go through each setting I defined, because that’s boring and people know better than me anyway, but I’ll highlight what I learned from it.</p>
+<h2>Face milling</h2>
+<p>When face milling, it’s ideal to only cut in one direction. The change of direction alternates between conventional and climb milling, which creates a step on the face between cuts and doesn’t give the best surface finish.</p>
+<p>My fault. I left the settings default and forgot to change it to climb mill only.</p>
+<h2>Surface finish</h2>
+<p>My surface finish wasn’t great overall on the part. This was likely due to tool selection. I had switched to a 6 mm 2-flute cutter to trial aluminium cutting, but didn’t change it before cutting the resin part.</p>
+<p>I initially blamed the flute count, but that was too broad: flute count alone does not say whether a cutter has a full-length cutting edge. On this trial the cutter, resin, feeds, speeds, stepdown, chip clearing, and setup could all have contributed to the poor finish. I still need controlled trials before drawing a conclusion.</p>
+<p>I’ve been told I should be able to chew through it, and I’ve been taking half a mil cuts, which is likely too small and causing friction. This explains why I got poor surface finish all over, even when doing circle cuts inside the 10 mm bore.</p>
+<p>Anyway, it’s all learning. I’m going to try modelling some new features, mainly contouring, facing, and some spiral hole making, and give it another go.</p>
+<p>I’m getting lots of feedback from actual machinists, which really helps with what to change and what to consider when setting the job up.</p>
+<p>The CAM software itself is relatively easy. Once I understand which settings affect which things, that makes it even simpler. It also visualises and simulates my tool paths, which is a useful check. It cannot guarantee the real machine will avoid a crash: the stock, workholding, tool, offsets, limits, and machine state still have to match the model.</p>
+<p>I’m really enjoying learning CNC. It’s very satisfying to program something and end up with a complete product, unlike CMM where you don’t end up with anything physical, bar an inspection report.</p>
+<p>It’ll also aid me a lot in the ability to manufacture parts to different tolerances. Since there will be requirements for specialist fixturing, I need the capability to finish printed components to a high quality — and within tolerance, of course.</p>
+<p><img src="../assets/images/cnc-first-actual-test-product-09.06.26.jpg" alt="Machined resin vee block after the first CNC test" width="1600" height="1200" loading="lazy" decoding="async"></p>
+<p>For now, it’s another step forward and another reminder that the measuring side and the manufacturing side are linked more closely than I first realised.</p>
+        </div>
       </div>
 
       <div class="footer-nav">
-        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
-        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+        <a class="btn" id="btn-prev" href="../posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="../posts/more-cnc-16.06.26.html"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
       </div>
     </article>
   </main>
@@ -109,7 +204,7 @@ My fault. I left the settings default and forgot to change it to climb mill only
 
 My surface finish wasn’t great overall on the part. This was likely due to tool selection. I had switched to a 6 mm 2-flute cutter to trial aluminium cutting, but didn’t change it before cutting the resin part.
 
-Apparently 2-flute cutters don’t cut along the whole length, so I was likely seeing welding occur throughout the cut. I still need to run trials to figure out how much I can get away with cutting per stepdown on a 4-flute 6 mm cutter.
+I initially blamed the flute count, but that was too broad: flute count alone does not say whether a cutter has a full-length cutting edge. On this trial the cutter, resin, feeds, speeds, stepdown, chip clearing, and setup could all have contributed to the poor finish. I still need controlled trials before drawing a conclusion.
 
 I’ve been told I should be able to chew through it, and I’ve been taking half a mil cuts, which is likely too small and causing friction. This explains why I got poor surface finish all over, even when doing circle cuts inside the 10 mm bore.
 
@@ -117,7 +212,7 @@ Anyway, it’s all learning. I’m going to try modelling some new features, mai
 
 I’m getting lots of feedback from actual machinists, which really helps with what to change and what to consider when setting the job up.
 
-The CAM software itself is relatively easy. Once I understand which settings affect which things, that makes it even simpler. It also visualises and simulates all of my tool paths so I can be sure I won’t crash, something I’m very thankful for!
+The CAM software itself is relatively easy. Once I understand which settings affect which things, that makes it even simpler. It also visualises and simulates my tool paths, which is a useful check. It cannot guarantee the real machine will avoid a crash: the stock, workholding, tool, offsets, limits, and machine state still have to match the model.
 
 I’m really enjoying learning CNC. It’s very satisfying to program something and end up with a complete product, unlike CMM where you don’t end up with anything physical, bar an inspection report.
 

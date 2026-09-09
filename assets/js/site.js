@@ -42,25 +42,111 @@ function el(tag, attrs = {}, children = []) {
   return e;
 }
 
-function openDrawer() {
-  document.querySelector('#drawer')?.classList.add('open');
-  document.querySelector('#drawer-backdrop')?.classList.add('open');
-  document.body.style.overflow = 'hidden';
+let drawerReturnFocus = null;
+let inertState = [];
+
+function drawerFocusableElements(drawer) {
+  return [...drawer.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')]
+    .filter((element) => !element.hidden && element.getAttribute('aria-hidden') !== 'true');
 }
 
-function closeDrawer() {
-  document.querySelector('#drawer')?.classList.remove('open');
-  document.querySelector('#drawer-backdrop')?.classList.remove('open');
+function setPageInert(drawer, backdrop, inert) {
+  if (inert) {
+    inertState = [...document.body.children]
+      .filter((element) => element !== drawer && element !== backdrop)
+      .map((element) => ({ element, wasInert: element.hasAttribute('inert') }));
+    inertState.forEach(({ element }) => element.setAttribute('inert', ''));
+    return;
+  }
+
+  inertState.forEach(({ element, wasInert }) => {
+    if (!wasInert) element.removeAttribute('inert');
+  });
+  inertState = [];
+}
+
+function openDrawer() {
+  const drawer = document.querySelector('#drawer');
+  const backdrop = document.querySelector('#drawer-backdrop');
+  const trigger = document.querySelector('#hamburger');
+  if (!drawer || !backdrop || drawer.classList.contains('open')) return;
+
+  drawerReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : trigger;
+  drawer.hidden = false;
+  backdrop.hidden = false;
+  backdrop.setAttribute('aria-hidden', 'false');
+  drawer.classList.add('open');
+  backdrop.classList.add('open');
+  trigger?.setAttribute('aria-expanded', 'true');
+  trigger?.setAttribute('aria-label', 'Close menu');
+  setPageInert(drawer, backdrop, true);
+  document.body.style.overflow = 'hidden';
+  drawerFocusableElements(drawer)[0]?.focus();
+}
+
+function closeDrawer({ returnFocus = true } = {}) {
+  const drawer = document.querySelector('#drawer');
+  const backdrop = document.querySelector('#drawer-backdrop');
+  const trigger = document.querySelector('#hamburger');
+  if (!drawer || !backdrop || !drawer.classList.contains('open')) return;
+
+  drawer.classList.remove('open');
+  backdrop.classList.remove('open');
+  drawer.hidden = true;
+  backdrop.hidden = true;
+  backdrop.setAttribute('aria-hidden', 'true');
+  trigger?.setAttribute('aria-expanded', 'false');
+  trigger?.setAttribute('aria-label', 'Open menu');
+  setPageInert(drawer, backdrop, false);
   document.body.style.overflow = '';
+  if (returnFocus && drawerReturnFocus?.isConnected) drawerReturnFocus.focus();
+  drawerReturnFocus = null;
 }
 
 function wireDrawer() {
   document.querySelector('#hamburger')?.addEventListener('click', openDrawer);
-  document.querySelector('#drawer-close')?.addEventListener('click', closeDrawer);
-  document.querySelector('#drawer-backdrop')?.addEventListener('click', closeDrawer);
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeDrawer();
+  document.querySelector('#drawer-close')?.addEventListener('click', () => closeDrawer());
+  document.querySelector('#drawer-backdrop')?.addEventListener('click', () => closeDrawer());
+  window.addEventListener('keydown', (event) => {
+    const drawer = document.querySelector('#drawer');
+    if (!drawer?.classList.contains('open')) return;
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeDrawer();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+
+    const focusable = drawerFocusableElements(drawer);
+    if (!focusable.length) {
+      event.preventDefault();
+      drawer.focus();
+      return;
+    }
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
+}
+
+function markCurrentLinks() {
+  const current = new URL(window.location.href);
+  for (const link of document.querySelectorAll('a[href]')) {
+    const target = new URL(link.getAttribute('href'), current);
+    if (target.origin === current.origin && target.pathname === current.pathname) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  }
+}
+
+function postDate(post) {
+  return el('time', { datetime: post.isoDate || '', title: post.isoDate || '' }, [post.date]);
 }
 
 function renderDrawerPosts(posts) {
@@ -74,7 +160,7 @@ function renderDrawerPosts(posts) {
     const a = el('a', { class: 'nav-link', href: joinRoot(root, p.path) }, [
       el('div', {}, [
         el('div', { class: 'name' }, [p.title]),
-        el('div', { class: 'meta' }, [p.date])
+        el('div', { class: 'meta' }, [postDate(p)])
       ]),
       el('div', { class: 'meta', 'aria-hidden': 'true' }, ['→'])
     ]);
@@ -94,7 +180,7 @@ function renderIndexPosts(posts) {
     const item = el('a', { class: 'nav-link', href: joinRoot(root, p.path) }, [
       el('div', {}, [
         el('div', { class: 'name' }, [p.title]),
-        el('div', { class: 'meta' }, [p.date])
+        el('div', { class: 'meta' }, [postDate(p)])
       ]),
       el('div', { class: 'meta', 'aria-hidden': 'true' }, ['Open'])
     ]);
@@ -110,6 +196,7 @@ async function initSite() {
     const posts = manifest.posts || [];
     renderDrawerPosts(posts);
     renderIndexPosts(posts);
+    markCurrentLinks();
   } catch (err) {
     console.warn(err);
   }

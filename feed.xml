@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ween’s Projects</title>
+  <id>https://wayner84.github.io/blog/</id>
+  <link href="https://wayner84.github.io/blog/"/>
+  <link rel="self" href="https://wayner84.github.io/blog/feed.xml"/>
+  <author><name>Wayne</name></author>
+  <updated>2026-07-05T00:00:00Z</updated>
+  <entry>
+    <title>App development</title>
+    <id>https://wayner84.github.io/blog/posts/app-development-05.07.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/app-development-05.07.26.html"/>
+    <published>2026-07-05T00:00:00Z</published>
+    <updated>2026-07-05T00:00:00Z</updated>
+    <summary>I’ve had quite a lot of development work going on recently, so I thought it was probably time to put a few of the projects in one place and talk about…</summary>
+  </entry>
+  <entry>
+    <title>CNC control with CNCjs, tool holders, and portable CAD</title>
+    <id>https://wayner84.github.io/blog/posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html"/>
+    <published>2026-06-18T00:00:00Z</published>
+    <updated>2026-06-18T00:00:00Z</updated>
+    <summary>Even though I planned to get stuck into some electronics projects, I got immediately sidetracked. No surprise there. The first problem was how awkward the…</summary>
+  </entry>
+  <entry>
+    <title>MORE CNC!</title>
+    <id>https://wayner84.github.io/blog/posts/more-cnc-16.06.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/more-cnc-16.06.26.html"/>
+    <published>2026-06-16T00:00:00Z</published>
+    <updated>2026-06-16T00:00:00Z</updated>
+    <summary>After a lot of feedback on my first few machining trials, it turned out my spindle speed was too high and my feed rate was too low. This time I went with…</summary>
+  </entry>
+  <entry>
+    <title>CNC first actual test</title>
+    <id>https://wayner84.github.io/blog/posts/cnc-first-actual-test-09.06.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/cnc-first-actual-test-09.06.26.html"/>
+    <published>2026-06-09T00:00:00Z</published>
+    <updated>2026-06-09T00:00:00Z</updated>
+    <summary>Even though I’m using the CNC for cleaning up the faces of the vee blocks, CNC is still pretty new to me. I know of it, and I know some terminology and…</summary>
+  </entry>
+  <entry>
+    <title>Docker Containers I&apos;ve found helpful and a new AI agent</title>
+    <id>https://wayner84.github.io/blog/posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html"/>
+    <published>2026-05-25T00:00:00Z</published>
+    <updated>2026-05-25T00:00:00Z</updated>
+    <summary>It feels like the right time for a new blog post. The main focus recently has been getting my digital workflow working properly. I’ve now got Tailscale on…</summary>
+  </entry>
+  <entry>
+    <title>Busy busy busy</title>
+    <id>https://wayner84.github.io/blog/posts/busy-busy-busy-28.04.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/busy-busy-busy-28.04.26.html"/>
+    <published>2026-04-28T00:00:00Z</published>
+    <updated>2026-04-28T00:00:00Z</updated>
+    <summary>I haven’t had time to update this site in a while, but I’ve been hard at work in the background. On the day I wrote these notes, I went to the MACH…</summary>
+  </entry>
+  <entry>
+    <title>Resin machining compatibility</title>
+    <id>https://wayner84.github.io/blog/posts/resin-machining-compatibility-25.03.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/resin-machining-compatibility-25.03.26.html"/>
+    <published>2026-03-25T00:00:00Z</published>
+    <updated>2026-03-25T00:00:00Z</updated>
+    <summary>Since buying a CNC router to machine these vee blocks is a fairly big investment, I needed to make sure it was actually a viable route before fully…</summary>
+  </entry>
+  <entry>
+    <title>Vee block progress and multi board</title>
+    <id>https://wayner84.github.io/blog/posts/vee-block-progress-and-multi-board-18.03.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/vee-block-progress-and-multi-board-18.03.26.html"/>
+    <published>2026-03-18T00:00:00Z</published>
+    <updated>2026-03-18T00:00:00Z</updated>
+    <summary>I’ve made some good progress on the vee blocks. After four failed prints, battling warping and the print shifting during the job, I finally got a good…</summary>
+  </entry>
+  <entry>
+    <title>Good thread test results!</title>
+    <id>https://wayner84.github.io/blog/posts/good-thread-test-results-10.03.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/good-thread-test-results-10.03.26.html"/>
+    <published>2026-03-10T00:00:00Z</published>
+    <updated>2026-03-10T00:00:00Z</updated>
+    <summary>I’ve reprinted the vee block clamps slightly thicker to mitigate the warping during inserting the brass inserts, and to give more wall thickness when…</summary>
+  </entry>
+  <entry>
+    <title>Working with what I’ve got</title>
+    <id>https://wayner84.github.io/blog/posts/working-with-what-ive-got-10.03.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/working-with-what-ive-got-10.03.26.html"/>
+    <published>2026-03-10T00:00:00Z</published>
+    <updated>2026-03-10T00:00:00Z</updated>
+    <summary>Despite my best efforts to construct a cabinet to hold my printers, I was actually short on lumber — I didn’t have enough 84” lengths. So I’ve had to…</summary>
+  </entry>
+  <entry>
+    <title>When life gives you lemons</title>
+    <id>https://wayner84.github.io/blog/posts/when-life-gives-you-lemons-04.03.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/when-life-gives-you-lemons-04.03.26.html"/>
+    <published>2026-03-04T00:00:00Z</published>
+    <updated>2026-03-04T00:00:00Z</updated>
+    <summary>A project I worked on a while back was creating a replica portal gun from the game Portal. Portal gun reference image I printed it on my Ender 3 years ago…</summary>
+  </entry>
+  <entry>
+    <title>MUFT upgrade</title>
+    <id>https://wayner84.github.io/blog/posts/muft-upgrade-04.03.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/muft-upgrade-04.03.26.html"/>
+    <published>2026-03-04T00:00:00Z</published>
+    <updated>2026-03-04T00:00:00Z</updated>
+    <summary>I ran out of filament on the 5th piece of the prototype — but I didn’t need it to finish to know a lot of the things I need to modify. V2 design changes…</summary>
+  </entry>
+  <entry>
+    <title>So much prototyping</title>
+    <id>https://wayner84.github.io/blog/posts/so-much-prototyping-01.03.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/so-much-prototyping-01.03.26.html"/>
+    <published>2026-03-01T00:00:00Z</published>
+    <updated>2026-03-01T00:00:00Z</updated>
+    <summary>I’ve been really busy over the past week and I’ve had a few projects eat up my time. I’m working on a lot at once at the moment, so progress on each one…</summary>
+  </entry>
+  <entry>
+    <title>Vee block clamp results and calliper holder</title>
+    <id>https://wayner84.github.io/blog/posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html"/>
+    <published>2026-02-16T00:00:00Z</published>
+    <updated>2026-02-16T00:00:00Z</updated>
+    <summary>I’ve completed both clamp tests (tapped holes and threaded inserts). I ran out of white ABS, so I had to finish the print in black ABS. Clamp prototypes:…</summary>
+  </entry>
+  <entry>
+    <title>Vee Block Clamp Tests</title>
+    <id>https://wayner84.github.io/blog/posts/vee-block-clamp-tests-14.02.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/vee-block-clamp-tests-14.02.26.html"/>
+    <published>2026-02-14T00:00:00Z</published>
+    <updated>2026-02-14T00:00:00Z</updated>
+    <summary>I’ve been doing a few thread tests, and it turns out it’s surprisingly hard to get a thread that’s both printable and actually functional (good…</summary>
+  </entry>
+  <entry>
+    <title>Vee Blocks, Resin Suction Forces and Logging</title>
+    <id>https://wayner84.github.io/blog/posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html</id>
+    <link href="https://wayner84.github.io/blog/posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html"/>
+    <published>2026-02-10T00:00:00Z</published>
+    <updated>2026-02-10T00:00:00Z</updated>
+    <summary>What I worked on First prototype of vee blocks A roughandready resin peel / suction force estimator for MSLA prints (mainly to explore the idea of support…</summary>
+  </entry>
+</feed>

@@ -1,84 +1,63 @@
-# Posting workflow (for Ween’s Projects)
+# Posting workflow — Ween’s Projects
 
-This blog is intentionally zero-build.
-A post is a single HTML file under `posts/` that contains a `<script type="text/markdown" id="post-markdown">` block.
-The page JS renders that markdown on load.
+The deployed blog is static and readable without JavaScript. Each post keeps its editable Markdown source in `#post-markdown`; `npm run build` converts that source into semantic article HTML and generates metadata, navigation, the Atom feed and sitemap.
 
 ## Where things live
 
-- Home page: `index.html`
-- About page: `about.html`
-- Posts:
-  - HTML files: `posts/*.html`
-  - Manifest: `posts/manifest.json`
-- Assets:
-  - CSS: `assets/css/styles.css`
-  - JS: `assets/js/site.js`, `assets/js/post.js`
-  - Images: `assets/images/*`
+- Home: `index.html`
+- About: `about.html`
+- Posts: `posts/*.html`
+- Generated post catalogue: `posts/manifest.json`
+- Styles/scripts/images: `assets/`
+- Publisher: `scripts/build.mjs`
+- Tests: `tests/`
 
-## Naming convention (recommended)
+## Naming convention
 
-Use a slug + the date:
+Use `posts/<title-slug>-DD.MM.YY.html`, for example:
 
-- `posts/<title-slug>-DD.MM.YY.html`
+`posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html`
 
-Example:
+The build derives the ISO publication date from the filename and sorts posts newest-first.
 
-- `posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html`
+## Creating a post
 
-Why: URL-friendly, unique, and keeps your preferred `DD.MM.YY` date style.
-(If you ever want natural sorting by filename, switch to `YYYY-MM-DD-title-slug.html`.)
+1. Copy a recent post HTML file to the new dated filename.
+2. Replace the Markdown inside `<script type="text/markdown" id="post-markdown">`.
+3. Ensure the first Markdown heading is the genuine post title. Use `##` for sections; the generated page title is the single page `h1`.
+4. Add photographs to `assets/images/` and reference them with useful alt text:
 
-## Creating a new post (checklist)
+   ```md
+   ![What the image communicates](../assets/images/descriptive-name.jpg)
+   ```
 
-1) Create a new HTML file in `posts/` by copying the latest post file.
+5. Do not publish photo placeholders. Either supply the real image and caption or remove the promise.
+6. Run the complete publication gate:
 
-2) Update these bits in the new file:
-- `<meta name="post:slug" content="...">` → set to the new filename
-- The markdown inside `#post-markdown`
-- The tag pills in the header (we currently hardcode these pills):
-  - date (e.g. `10.02.26`)
-  - topic tags (e.g. `Vee Blocks`, `Resin Suction Sim`)
+   ```sh
+   npm install
+   npm run check
+   npm audit --audit-level=high
+   ```
 
-3) Add images to:
-- `assets/images/`
+7. Review the resulting diff. The build updates all post shells, `posts/manifest.json`, `index.html`, `about.html`, `feed.xml` and `sitemap.xml` deterministically.
+8. Preview the home page and new post at desktop and mobile widths. Check the menu by keyboard, images, headings, links, previous/next navigation and no-JavaScript readability.
+9. Commit and push only after the checks and preview pass.
 
-…and reference them in the post markdown like:
+## Editorial checks
 
-- `![alt text](../assets/images/your-image.jpg)`
+- Treat personal measurements and machining trials as dated observations, not universal specifications or safety guarantees.
+- State the tested software/game/device version when saying “current”.
+- Qualify privacy, backup, price and service-limit claims; link authoritative documentation where useful.
+- Keep dimensions explicit (`length × width × height`) rather than ambiguous square-unit notation.
+- Preserve the candid first-person voice while clearly marking limitations and later corrections.
 
-4) Update `posts/manifest.json` (TOP = NEWEST):
+## WhatsApp input format
 
-```json
-{
-  "title": "Ween’s Projects",
-  "posts": [
-    {
-      "title": "Your Post Title",
-      "date": "DD.MM.YY",
-      "path": "posts/your-slug-DD.MM.YY.html"
-    }
-  ]
-}
-```
+Send Michael:
 
-5) Commit + push.
+1. Title, date, tags and body text with headings/bullets.
+2. Image-placement notes and then the actual images in order.
+3. Any dates, versions, measurements or safety qualifications that should accompany the post.
 
-## WhatsApp “new post” input format (what to send Michael)
-
-Send:
-
-1) One long message containing:
-- Post title
-- Date
-- Tags
-- Body (with headings + bullets as you like)
-- Image notes like `[photo 1 here: ...]` where you want images inserted
-
-2) Then send images (in order).
-
-Michael will:
-- pick filenames under `assets/images/` that match the post
-- replace placeholders with the correct `../assets/images/...` links
-- update the manifest
-- commit + push
+Michael can then prepare the source, run the build and tests, preview it, and ask for approval before any push.

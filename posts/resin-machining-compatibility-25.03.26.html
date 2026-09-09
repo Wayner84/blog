@@ -3,7 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Post — Ween’s Projects</title>
+  <title>Resin machining compatibility — Ween’s Projects</title>
+  <link rel="alternate" type="application/atom+xml" title="Ween’s Projects feed" href="../feed.xml" />
+<!-- generated:post-metadata:start -->
+  <meta name="description" content="Since buying a CNC router to machine these vee blocks is a fairly big investment, I needed to make sure it was actually a viable route before fully…" />
+  <link rel="canonical" href="https://wayner84.github.io/blog/posts/resin-machining-compatibility-25.03.26.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Resin machining compatibility" />
+  <meta property="og:description" content="Since buying a CNC router to machine these vee blocks is a fairly big investment, I needed to make sure it was actually a viable route before fully…" />
+  <meta property="og:url" content="https://wayner84.github.io/blog/posts/resin-machining-compatibility-25.03.26.html" />
+  <meta property="og:image" content="https://wayner84.github.io/blog/assets/images/resin-machining-compatibility-machined-face-25.03.26.jpg" />
+  <meta property="article:published_time" content="2026-03-25" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Resin machining compatibility" />
+  <meta name="twitter:description" content="Since buying a CNC router to machine these vee blocks is a fairly big investment, I needed to make sure it was actually a viable route before fully…" />
+  <meta name="twitter:image" content="https://wayner84.github.io/blog/assets/images/resin-machining-compatibility-machined-face-25.03.26.jpg" />
+<!-- generated:post-metadata:end -->
 
   <!-- This slug lets post.js find this entry in manifest.json -->
   <meta name="post:slug" content="resin-machining-compatibility-25.03.26.html" />
@@ -13,14 +28,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/styles.css" />
-
-  <!-- Markdown renderer (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <header class="header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="header">
     <div class="header-inner">
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-controls="drawer" aria-expanded="false" aria-label="Open menu">
         <div class="lines" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
@@ -36,8 +49,8 @@
   </header>
 
   <!-- Drawer -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="drawer" id="drawer" aria-label="Site menu">
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
     <div class="drawer-header">
       <div class="drawer-title">Menu</div>
       <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
@@ -57,29 +70,102 @@
 
       <div class="nav-section">
         <div class="nav-label">Posts (newest first)</div>
-        <div id="drawer-posts"></div>
+        <div id="drawer-posts">
+          <a class="nav-link" href="../posts/app-development-05.07.26.html">
+            <div><div class="name">App development</div><div class="meta"><time datetime="2026-07-05">05.07.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html">
+            <div><div class="name">CNC control with CNCjs, tool holders, and portable CAD</div><div class="meta"><time datetime="2026-06-18">18.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/more-cnc-16.06.26.html">
+            <div><div class="name">MORE CNC!</div><div class="meta"><time datetime="2026-06-16">16.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-first-actual-test-09.06.26.html">
+            <div><div class="name">CNC first actual test</div><div class="meta"><time datetime="2026-06-09">09.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html">
+            <div><div class="name">Docker Containers I've found helpful and a new AI agent</div><div class="meta"><time datetime="2026-05-25">25.05.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/busy-busy-busy-28.04.26.html">
+            <div><div class="name">Busy busy busy</div><div class="meta"><time datetime="2026-04-28">28.04.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/resin-machining-compatibility-25.03.26.html" aria-current="page">
+            <div><div class="name">Resin machining compatibility</div><div class="meta"><time datetime="2026-03-25">25.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-progress-and-multi-board-18.03.26.html">
+            <div><div class="name">Vee block progress and multi board</div><div class="meta"><time datetime="2026-03-18">18.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/good-thread-test-results-10.03.26.html">
+            <div><div class="name">Good thread test results!</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/working-with-what-ive-got-10.03.26.html">
+            <div><div class="name">Working with what I’ve got</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/when-life-gives-you-lemons-04.03.26.html">
+            <div><div class="name">When life gives you lemons</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/muft-upgrade-04.03.26.html">
+            <div><div class="name">MUFT upgrade</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/so-much-prototyping-01.03.26.html">
+            <div><div class="name">So much prototyping</div><div class="meta"><time datetime="2026-03-01">01.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html">
+            <div><div class="name">Vee block clamp results and calliper holder</div><div class="meta"><time datetime="2026-02-16">16.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-tests-14.02.26.html">
+            <div><div class="name">Vee Block Clamp Tests</div><div class="meta"><time datetime="2026-02-14">14.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html">
+            <div><div class="name">Vee Blocks, Resin Suction Forces and Logging</div><div class="meta"><time datetime="2026-02-10">10.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+        </div>
       </div>
     </div>
   </aside>
 
-  <main class="container">
+  <main class="container" id="main-content" tabindex="-1">
     <article class="card">
       <div class="card-inner">
-        <h1 class="post-title" id="post-title">Loading…</h1>
+        <h1 class="post-title" id="post-title">Resin machining compatibility</h1>
         <div class="post-meta">
-          <span class="pill">25.03.26</span>
-          <span class="pill">Vee Blocks</span>
-          <span class="pill">Resin</span>
-          <span class="pill">Machining</span>
-          <span class="pill">CNC</span>
+          <time class="pill" id="post-date" datetime="2026-03-25">25.03.26</time>
         </div>
 
-        <div class="markdown" id="post-content"></div>
+        <div class="markdown" id="post-content">
+<p>Since buying a CNC router to machine these vee blocks is a fairly big investment, I needed to make sure it was actually a viable route before fully committing. To test that, I asked a colleague if he could quickly skim the surface of <strong>2 of the 10</strong> prototype vee blocks I printed, just to see whether I was making the right call.</p>
+<p>The results were better than I expected. He said the material machined really well and wasn’t difficult to work with at all. It didn’t crack, split, or chip on the edges either, which if I’m honest, was something I expected might happen.</p>
+<p>The machined surface looks great, and overall I’m really impressed. It definitely seems like a viable method for removing excess material and improving both the quality and dimensional accuracy of the final product.</p>
+<p><img src="../assets/images/resin-machining-compatibility-machined-face-25.03.26.jpg" alt="Machined face of the resin vee block after skimming" width="2048" height="1536" loading="eager" decoding="async" fetchpriority="high"></p>
+<p>That said, the test wasn’t completely without fault. He did mention there was a slight lip on the bottom face of the vee block caused by warping. He only removed around <strong>1 mm</strong> of material, so taking off a little more could help, but I think the better solution is simply to machine all of the faces.</p>
+<p>At this point, these parts are reaching a quality level I’m genuinely happy with. They’re not just a cheaper alternative — they’re turning out far better than I expected for a budget option.</p>
+<p>To back that up, I measured the surface finish of the machined face to confirm whether machining all faces down to final dimension would be the best approach.</p>
+<p><img src="../assets/images/resin-machining-compatibility-surface-finish-25.03.26.jpg" alt="Surface finish reading showing Ra 0.456 µm" width="1536" height="2048" loading="lazy" decoding="async"></p>
+<p>And there it is: <strong>Ra 0.456 µm</strong>.</p>
+<p>That’s a really respectable finish for what’s intended to be a lower-cost option, so I’m now fully convinced that machining the faces clean is the right move.</p>
+<p>The machine has been ordered, and it should be here next week.</p>
+        </div>
       </div>
 
       <div class="footer-nav">
-        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
-        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+        <a class="btn" id="btn-prev" href="../posts/vee-block-progress-and-multi-board-18.03.26.html"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="../posts/busy-busy-busy-28.04.26.html"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
       </div>
     </article>
   </main>

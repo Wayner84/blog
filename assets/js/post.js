@@ -1,4 +1,4 @@
-/* Post page behavior: render markdown + prev/next navigation */
+/* Post page behavior: progressively enhance prev/next navigation */
 
 function slugFromPath(path) {
   return (path || '').split('/').pop();
@@ -17,50 +17,28 @@ function setBtn(btn, href, label) {
   btn.querySelector('[data-label]')?.replaceChildren(label);
 }
 
-function renderMarkdownInto(container, markdown) {
-  if (!container) return;
-
-  // marked is loaded via CDN in the HTML.
-  const html = window.marked.parse(markdown, {
-    mangle: false,
-    headerIds: true
-  });
-  container.innerHTML = html;
-}
-
 async function initPostPage() {
   try {
     const root = window.__WEEN_BLOG__?.getSiteRoot?.() || '/';
-    const joinRoot = window.__WEEN_BLOG__?.joinRoot || ((r, p) => r + String(p || '').replace(/^\//, ''));
-
-    const manifest = await window.__WEEN_BLOG__.fetchManifest();
-    const posts = manifest.posts || [];
-
+    const joinRoot = window.__WEEN_BLOG__?.joinRoot || ((base, relative) => base + String(relative || '').replace(/^\//, ''));
+    const manifest = await window.__WEEN_BLOG__?.fetchManifest?.();
+    const posts = manifest?.posts || [];
     const current = document.querySelector('meta[name="post:slug"]')?.content || slugFromPath(location.pathname);
-    const idx = posts.findIndex(p => slugFromPath(p.path) === current);
+    const index = posts.findIndex((post) => slugFromPath(post.path) === current);
+    if (index < 0) return;
 
-    const prevPost = (idx >= 0 && idx < posts.length - 1) ? posts[idx + 1] : null; // older
-    const nextPost = (idx > 0) ? posts[idx - 1] : null; // newer
+    const older = index < posts.length - 1 ? posts[index + 1] : null;
+    const newer = index > 0 ? posts[index - 1] : null;
+    setBtn(document.querySelector('#btn-prev'), older ? joinRoot(root, older.path) : null, 'Previous');
+    setBtn(document.querySelector('#btn-next'), newer ? joinRoot(root, newer.path) : null, 'Next');
 
-    setBtn(document.querySelector('#btn-prev'), prevPost ? joinRoot(root, prevPost.path) : null, 'Previous');
-    setBtn(document.querySelector('#btn-next'), nextPost ? joinRoot(root, nextPost.path) : null, 'Next');
-
-    // Render markdown
-    const md = document.querySelector('#post-markdown')?.textContent || '';
-    renderMarkdownInto(document.querySelector('#post-content'), md);
-
-    // Fill title/meta from the manifest when possible (single source of truth)
-    const titleEl = document.querySelector('#post-title');
-    const dateEl = document.querySelector('#post-date');
-    if (idx >= 0) {
-      if (titleEl) titleEl.textContent = posts[idx].title;
-      if (dateEl) dateEl.textContent = posts[idx].date;
-    }
-  } catch (err) {
-    console.warn(err);
-    // Still render markdown even if manifest fails
-    const md = document.querySelector('#post-markdown')?.textContent || '';
-    renderMarkdownInto(document.querySelector('#post-content'), md);
+    const title = document.querySelector('#post-title');
+    const date = document.querySelector('#post-date');
+    if (title) title.textContent = posts[index].title;
+    if (date) date.textContent = posts[index].date;
+  } catch (error) {
+    // The built HTML is complete; a failed enhancement must not replace it.
+    console.warn(error);
   }
 }
 

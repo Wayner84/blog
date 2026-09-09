@@ -3,7 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Post — Ween’s Projects</title>
+  <title>CNC control with CNCjs, tool holders, and portable CAD — Ween’s Projects</title>
+  <link rel="alternate" type="application/atom+xml" title="Ween’s Projects feed" href="../feed.xml" />
+<!-- generated:post-metadata:start -->
+  <meta name="description" content="Even though I planned to get stuck into some electronics projects, I got immediately sidetracked. No surprise there. The first problem was how awkward the…" />
+  <link rel="canonical" href="https://wayner84.github.io/blog/posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="CNC control with CNCjs, tool holders, and portable CAD" />
+  <meta property="og:description" content="Even though I planned to get stuck into some electronics projects, I got immediately sidetracked. No surprise there. The first problem was how awkward the…" />
+  <meta property="og:url" content="https://wayner84.github.io/blog/posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html" />
+  <meta property="og:image" content="https://wayner84.github.io/blog/assets/images/cncjs-raspberry-pi-mounted-multiboard-18.06.26.jpg" />
+  <meta property="article:published_time" content="2026-06-18" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CNC control with CNCjs, tool holders, and portable CAD" />
+  <meta name="twitter:description" content="Even though I planned to get stuck into some electronics projects, I got immediately sidetracked. No surprise there. The first problem was how awkward the…" />
+  <meta name="twitter:image" content="https://wayner84.github.io/blog/assets/images/cncjs-raspberry-pi-mounted-multiboard-18.06.26.jpg" />
+<!-- generated:post-metadata:end -->
 
   <!-- This slug lets post.js find this entry in manifest.json -->
   <meta name="post:slug" content="cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html" />
@@ -13,14 +28,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/styles.css" />
-
-  <!-- Markdown renderer (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <header class="header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="header">
     <div class="header-inner">
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-controls="drawer" aria-expanded="false" aria-label="Open menu">
         <div class="lines" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
@@ -36,8 +49,8 @@
   </header>
 
   <!-- Drawer -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="drawer" id="drawer" aria-label="Site menu">
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
     <div class="drawer-header">
       <div class="drawer-title">Menu</div>
       <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
@@ -57,29 +70,125 @@
 
       <div class="nav-section">
         <div class="nav-label">Posts (newest first)</div>
-        <div id="drawer-posts"></div>
+        <div id="drawer-posts">
+          <a class="nav-link" href="../posts/app-development-05.07.26.html">
+            <div><div class="name">App development</div><div class="meta"><time datetime="2026-07-05">05.07.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html" aria-current="page">
+            <div><div class="name">CNC control with CNCjs, tool holders, and portable CAD</div><div class="meta"><time datetime="2026-06-18">18.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/more-cnc-16.06.26.html">
+            <div><div class="name">MORE CNC!</div><div class="meta"><time datetime="2026-06-16">16.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-first-actual-test-09.06.26.html">
+            <div><div class="name">CNC first actual test</div><div class="meta"><time datetime="2026-06-09">09.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html">
+            <div><div class="name">Docker Containers I've found helpful and a new AI agent</div><div class="meta"><time datetime="2026-05-25">25.05.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/busy-busy-busy-28.04.26.html">
+            <div><div class="name">Busy busy busy</div><div class="meta"><time datetime="2026-04-28">28.04.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/resin-machining-compatibility-25.03.26.html">
+            <div><div class="name">Resin machining compatibility</div><div class="meta"><time datetime="2026-03-25">25.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-progress-and-multi-board-18.03.26.html">
+            <div><div class="name">Vee block progress and multi board</div><div class="meta"><time datetime="2026-03-18">18.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/good-thread-test-results-10.03.26.html">
+            <div><div class="name">Good thread test results!</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/working-with-what-ive-got-10.03.26.html">
+            <div><div class="name">Working with what I’ve got</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/when-life-gives-you-lemons-04.03.26.html">
+            <div><div class="name">When life gives you lemons</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/muft-upgrade-04.03.26.html">
+            <div><div class="name">MUFT upgrade</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/so-much-prototyping-01.03.26.html">
+            <div><div class="name">So much prototyping</div><div class="meta"><time datetime="2026-03-01">01.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html">
+            <div><div class="name">Vee block clamp results and calliper holder</div><div class="meta"><time datetime="2026-02-16">16.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-tests-14.02.26.html">
+            <div><div class="name">Vee Block Clamp Tests</div><div class="meta"><time datetime="2026-02-14">14.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html">
+            <div><div class="name">Vee Blocks, Resin Suction Forces and Logging</div><div class="meta"><time datetime="2026-02-10">10.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+        </div>
       </div>
     </div>
   </aside>
 
-  <main class="container">
+  <main class="container" id="main-content" tabindex="-1">
     <article class="card">
       <div class="card-inner">
-        <h1 class="post-title" id="post-title">Loading…</h1>
+        <h1 class="post-title" id="post-title">CNC control with CNCjs, tool holders, and portable CAD</h1>
         <div class="post-meta">
-          <span class="pill">18.06.26</span>
-          <span class="pill">CNC</span>
-          <span class="pill">CNCjs</span>
-          <span class="pill">Tooling</span>
-          <span class="pill">CADroid</span>
+          <time class="pill" id="post-date" datetime="2026-06-18">18.06.26</time>
         </div>
 
-        <div class="markdown" id="post-content"></div>
+        <div class="markdown" id="post-content">
+<p>Even though I planned to get stuck into some electronics projects, I got immediately sidetracked. No surprise there.</p>
+<p>The first problem was how awkward the CNC workflow was. I do all my CAD and CAM work on my main PC, but the CNC was being controlled by a USB cable connected to my laptop. That meant exporting the G-code from the PC, copying it over to the laptop, and then running it from there. It worked, but it felt like a clunky extra step every single time.</p>
+<p>Naturally, I thought there had to be a way to make something closer to a proper CNC control panel, like you get on commercial machines. A quick chat with Hermes Agent gave me a few options, and the strongest one for my setup looked like CNCjs.</p>
+<h2>Turning a spare Raspberry Pi into a CNC controller</h2>
+<p>I have so many spare Raspberry Pis and Arduinos that I didn’t need to buy anything for this. I used my lowest-spec Raspberry Pi 3 B, running the 32-bit Raspberry Pi OS Lite image with no GUI. That massively reduced the amount of resources being consumed while the Pi is just sitting there idle.</p>
+<p>I loaded CNCjs onto the Pi and set it up to launch automatically as a service whenever the Pi boots. I do have a small 5-inch touchscreen that I can connect if I want a GUI directly on the Pi, but I don’t really want to make it sluggish. Its actual job is to send G-code reliably, so keeping it lightweight makes sense.</p>
+<p><img src="../assets/images/cncjs-raspberry-pi-mounted-multiboard-18.06.26.jpg" alt="Raspberry Pi CNCjs controller mounted on the multiboard wall behind the CNC machine" width="1600" height="1200" loading="eager" decoding="async" fetchpriority="high"></p>
+<p>I managed to attach it to my multiboard wall and put it behind the machine so it’s out of the way. With the USB cable attached to the Pi and the Wi-Fi configured, I can now access the CNCjs interface remotely and control the machine from any computer on the network.</p>
+<p><img src="../assets/images/cncjs-interface-18.06.26.svg" alt="Illustration of a CNCjs-style interface with toolpath preview, position readout, jog controls, and G-code console" width="1400" height="850" loading="lazy" decoding="async"></p>
+<p>That means I can export the G-code on my more powerful PC and run it straight from there, instead of constantly moving files around. It is a much cleaner workflow, and the interface is pretty fancy too.</p>
+<h2>Tool holders</h2>
+<p>A friend gave me some old tooling because he doesn’t machine anymore and didn’t need it. I’m very happy to have it, but I’m also conscious that keeping cutters stored badly is not going to help tool life.</p>
+<p>I also want the tools in a proper order so I can set them up in Fusion 360 numerically, then number the physical tools for quick access. It should make setup much easier once I have a consistent system.</p>
+<p><img src="../assets/images/cnc-tool-holders-multiboard-18.06.26.jpg" alt="3D printed CNC tool holders mounted on the multiboard wall with cutters organised by size" width="1600" height="1200" loading="lazy" decoding="async"></p>
+<p>Someone online had posted a holder design with the FreeCAD files included. I hadn’t really used FreeCAD before, but it was relatively intuitive. That let me edit the design for the diameter of my tooling, because the original options were not quite right for what I needed. They had 3 mm holders and then 3–12 mm holders, whereas I mostly needed 3 mm and 6 mm.</p>
+<p>I’m happy with the holders. They fit great on the multiboard wall, and I’m trying not to put absolutely everything I own on there. The plan is to keep only the stuff I need quick access to around the machines. This is the start of that, so the rest of the wall is still pretty empty at the moment.</p>
+<h2>CADroid: portable CAD</h2>
+<p>This is a bigger project, but it is something I actually need.</p>
+<p>The current options for making 3D models on mobile are quite costly. I can remote into my PC and use SOLIDWORKS or Fusion 360, but it is painful. I lack proper rotation control, the buttons are tiny, and it is just not a nice way to get anything done.</p>
+<p>So although I could keep working around it, I want something easier for designing parts on the go when I get a random idea. I’m developing a new CAD app and calling it CADroid.</p>
+<p><img src="../assets/images/cadroid-portable-cad-sketch-view-18.06.26.jpg" alt="CADroid mobile CAD prototype showing a circle sketch on a 3D grid with sketch tools and orientation controls" width="600" height="1304" loading="lazy" decoding="async"></p>
+<p>At the moment the app is still very basic functionally. I’m focusing on locking down the geometrical constraints for 2D sketching before adding any 3D features. So far, I have:</p>
+<ul>
+<li>a 3D environment;</li>
+<li>the ability to move, zoom, and rotate;</li>
+<li>sketch planes for XY, YZ, and XZ;</li>
+<li>tools for lines, circles, and rectangles;</li>
+<li>the beginning of horizontal and vertical dimension constraints.</li>
+</ul>
+<p>That last part still needs work. Constraints are proving to be quite a difficult task, which is not exactly shocking, but it is definitely one of the core things that needs to feel right.</p>
+<p>I’m happy with the look of it at the moment. A lot is still placeholder, and I need to clean up the icons, toolbar, and landscape orientation. After that, the main focus is fixing the constraint system.</p>
+<p>On 18 June 2026, I estimated that it might take about two to three months of development before I had a version 1 prototype ready. That was a dated estimate, not a promised release date. I want to get it properly working before putting it out there, because I want feedback on the actual workflow of the app rather than just a hoard of bug reports.</p>
+<p>The goal is simple: make it quick and easy to model a part on the fly.</p>
+<p>Stay tuned!</p>
+        </div>
       </div>
 
       <div class="footer-nav">
-        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
-        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+        <a class="btn" id="btn-prev" href="../posts/more-cnc-16.06.26.html"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="../posts/app-development-05.07.26.html"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
       </div>
     </article>
   </main>
@@ -141,7 +250,7 @@ That last part still needs work. Constraints are proving to be quite a difficult
 
 I’m happy with the look of it at the moment. A lot is still placeholder, and I need to clean up the icons, toolbar, and landscape orientation. After that, the main focus is fixing the constraint system.
 
-I estimate it will take about two to three months of development before I have a version 1 prototype ready for release. I want to get it properly working before putting it out there, because I want feedback on the actual workflow of the app rather than just a hoard of bug reports.
+On 18 June 2026, I estimated that it might take about two to three months of development before I had a version 1 prototype ready. That was a dated estimate, not a promised release date. I want to get it properly working before putting it out there, because I want feedback on the actual workflow of the app rather than just a hoard of bug reports.
 
 The goal is simple: make it quick and easy to model a part on the fly.
 

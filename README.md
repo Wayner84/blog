@@ -1,21 +1,26 @@
-# Ween’s Projects — Blog (GitHub Pages)
+# Ween’s Projects — Blog
 
-A simple static blog for logging creative projects with photos.
+A static GitHub Pages blog for logging creative projects with photographs. Post pages contain build-generated semantic HTML, unique metadata and a preserved Markdown source block.
 
 ## Structure
-- `index.html` — home + newest posts
+
+- `index.html` — home and newest posts
 - `about.html` — about page
-- `posts/` — each post is a standalone HTML file: `posts/TITLE-DD.MM.YY.html`
-- `posts/manifest.json` — list of posts in upload order (newest first)
-- `assets/` — CSS/JS/images
+- `posts/*.html` — published posts
+- `posts/manifest.json` — generated, date-sorted post catalogue
+- `assets/` — CSS, JavaScript and images
+- `scripts/build.mjs` — deterministic static publication build
+- `feed.xml` and `sitemap.xml` — generated discovery files
+- `tests/` — publication and interaction checks
 
-## Add a new post
-1. Copy `posts/example-post-10.02.26.html` and rename it to `posts/<title>-DD.MM.YY.html`
-2. Edit the `<script type="text/markdown" id="post-markdown">` block.
-3. Add the new entry to `posts/manifest.json` (top = newest).
-4. Commit + push.
+## Local verification
 
-Markdown supports images:
-```md
-![alt text](../assets/images/my-photo.jpg)
+```sh
+npm install
+npm run check
+npm audit --audit-level=high
 ```
+
+`npm run check` builds all post pages, the index navigation, Atom feed and sitemap before running the complete test suite.
+
+See `POSTING.md` for the publishing checklist.

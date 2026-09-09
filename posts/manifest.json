@@ -4,76 +4,113 @@
     {
       "title": "App development",
       "date": "05.07.26",
+      "published": "2026-07-05",
+      "description": "I’ve had quite a lot of development work going on recently, so I thought it was probably time to put a few of the projects in one place and talk about…",
       "path": "posts/app-development-05.07.26.html"
     },
     {
       "title": "CNC control with CNCjs, tool holders, and portable CAD",
       "date": "18.06.26",
+      "published": "2026-06-18",
+      "description": "Even though I planned to get stuck into some electronics projects, I got immediately sidetracked. No surprise there. The first problem was how awkward the…",
       "path": "posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html"
     },
     {
       "title": "MORE CNC!",
       "date": "16.06.26",
+      "published": "2026-06-16",
+      "description": "After a lot of feedback on my first few machining trials, it turned out my spindle speed was too high and my feed rate was too low. This time I went with…",
       "path": "posts/more-cnc-16.06.26.html"
     },
     {
       "title": "CNC first actual test",
       "date": "09.06.26",
+      "published": "2026-06-09",
+      "description": "Even though I’m using the CNC for cleaning up the faces of the vee blocks, CNC is still pretty new to me. I know of it, and I know some terminology and…",
       "path": "posts/cnc-first-actual-test-09.06.26.html"
     },
     {
       "title": "Docker Containers I've found helpful and a new AI agent",
       "date": "25.05.26",
+      "published": "2026-05-25",
+      "description": "It feels like the right time for a new blog post. The main focus recently has been getting my digital workflow working properly. I’ve now got Tailscale on…",
       "path": "posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html"
     },
     {
       "title": "Busy busy busy",
       "date": "28.04.26",
+      "published": "2026-04-28",
+      "description": "I haven’t had time to update this site in a while, but I’ve been hard at work in the background. On the day I wrote these notes, I went to the MACH…",
       "path": "posts/busy-busy-busy-28.04.26.html"
     },
     {
       "title": "Resin machining compatibility",
       "date": "25.03.26",
+      "published": "2026-03-25",
+      "description": "Since buying a CNC router to machine these vee blocks is a fairly big investment, I needed to make sure it was actually a viable route before fully…",
       "path": "posts/resin-machining-compatibility-25.03.26.html"
     },
     {
       "title": "Vee block progress and multi board",
       "date": "18.03.26",
+      "published": "2026-03-18",
+      "description": "I’ve made some good progress on the vee blocks. After four failed prints, battling warping and the print shifting during the job, I finally got a good…",
       "path": "posts/vee-block-progress-and-multi-board-18.03.26.html"
     },
     {
       "title": "Good thread test results!",
       "date": "10.03.26",
+      "published": "2026-03-10",
+      "description": "I’ve reprinted the vee block clamps slightly thicker to mitigate the warping during inserting the brass inserts, and to give more wall thickness when…",
       "path": "posts/good-thread-test-results-10.03.26.html"
     },
     {
       "title": "Working with what I’ve got",
       "date": "10.03.26",
+      "published": "2026-03-10",
+      "description": "Despite my best efforts to construct a cabinet to hold my printers, I was actually short on lumber — I didn’t have enough 84” lengths. So I’ve had to…",
       "path": "posts/working-with-what-ive-got-10.03.26.html"
     },
     {
       "title": "When life gives you lemons",
       "date": "04.03.26",
+      "published": "2026-03-04",
+      "description": "A project I worked on a while back was creating a replica portal gun from the game Portal. Portal gun reference image I printed it on my Ender 3 years ago…",
       "path": "posts/when-life-gives-you-lemons-04.03.26.html"
+    },
+    {
+      "title": "MUFT upgrade",
+      "date": "04.03.26",
+      "published": "2026-03-04",
+      "description": "I ran out of filament on the 5th piece of the prototype — but I didn’t need it to finish to know a lot of the things I need to modify. V2 design changes…",
+      "path": "posts/muft-upgrade-04.03.26.html"
     },
     {
       "title": "So much prototyping",
       "date": "01.03.26",
+      "published": "2026-03-01",
+      "description": "I’ve been really busy over the past week and I’ve had a few projects eat up my time. I’m working on a lot at once at the moment, so progress on each one…",
       "path": "posts/so-much-prototyping-01.03.26.html"
     },
     {
       "title": "Vee block clamp results and calliper holder",
       "date": "16.02.26",
+      "published": "2026-02-16",
+      "description": "I’ve completed both clamp tests (tapped holes and threaded inserts). I ran out of white ABS, so I had to finish the print in black ABS. Clamp prototypes:…",
       "path": "posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html"
     },
     {
       "title": "Vee Block Clamp Tests",
       "date": "14.02.26",
+      "published": "2026-02-14",
+      "description": "I’ve been doing a few thread tests, and it turns out it’s surprisingly hard to get a thread that’s both printable and actually functional (good…",
       "path": "posts/vee-block-clamp-tests-14.02.26.html"
     },
     {
       "title": "Vee Blocks, Resin Suction Forces and Logging",
       "date": "10.02.26",
+      "published": "2026-02-10",
+      "description": "What I worked on First prototype of vee blocks A roughandready resin peel / suction force estimator for MSLA prints (mainly to explore the idea of support…",
       "path": "posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html"
     }
   ]

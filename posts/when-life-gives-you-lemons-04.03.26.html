@@ -3,7 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Post — Ween’s Projects</title>
+  <title>When life gives you lemons — Ween’s Projects</title>
+  <link rel="alternate" type="application/atom+xml" title="Ween’s Projects feed" href="../feed.xml" />
+<!-- generated:post-metadata:start -->
+  <meta name="description" content="A project I worked on a while back was creating a replica portal gun from the game Portal. Portal gun reference image I printed it on my Ender 3 years ago…" />
+  <link rel="canonical" href="https://wayner84.github.io/blog/posts/when-life-gives-you-lemons-04.03.26.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="When life gives you lemons" />
+  <meta property="og:description" content="A project I worked on a while back was creating a replica portal gun from the game Portal. Portal gun reference image I printed it on my Ender 3 years ago…" />
+  <meta property="og:url" content="https://wayner84.github.io/blog/posts/when-life-gives-you-lemons-04.03.26.html" />
+  <meta property="og:image" content="https://wayner84.github.io/blog/assets/images/portal-gun-reference-04.03.26.jpg" />
+  <meta property="article:published_time" content="2026-03-04" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="When life gives you lemons" />
+  <meta name="twitter:description" content="A project I worked on a while back was creating a replica portal gun from the game Portal. Portal gun reference image I printed it on my Ender 3 years ago…" />
+  <meta name="twitter:image" content="https://wayner84.github.io/blog/assets/images/portal-gun-reference-04.03.26.jpg" />
+<!-- generated:post-metadata:end -->
 
   <!-- This slug lets post.js find this entry in manifest.json -->
   <meta name="post:slug" content="when-life-gives-you-lemons-04.03.26.html" />
@@ -13,14 +28,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:opsz,wght@9..144,200..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/styles.css" />
-
-  <!-- Markdown renderer (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <header class="header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="header">
     <div class="header-inner">
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-controls="drawer" aria-expanded="false" aria-label="Open menu">
         <div class="lines" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
@@ -36,8 +49,8 @@
   </header>
 
   <!-- Drawer -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="drawer" id="drawer" aria-label="Site menu">
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
     <div class="drawer-header">
       <div class="drawer-title">Menu</div>
       <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
@@ -57,30 +70,110 @@
 
       <div class="nav-section">
         <div class="nav-label">Posts (newest first)</div>
-        <div id="drawer-posts"></div>
+        <div id="drawer-posts">
+          <a class="nav-link" href="../posts/app-development-05.07.26.html">
+            <div><div class="name">App development</div><div class="meta"><time datetime="2026-07-05">05.07.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-control-with-cncjs-tool-holders-and-portable-cad-18.06.26.html">
+            <div><div class="name">CNC control with CNCjs, tool holders, and portable CAD</div><div class="meta"><time datetime="2026-06-18">18.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/more-cnc-16.06.26.html">
+            <div><div class="name">MORE CNC!</div><div class="meta"><time datetime="2026-06-16">16.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/cnc-first-actual-test-09.06.26.html">
+            <div><div class="name">CNC first actual test</div><div class="meta"><time datetime="2026-06-09">09.06.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/docker-containers-ive-found-helpful-and-a-new-ai-agent-25.05.26.html">
+            <div><div class="name">Docker Containers I've found helpful and a new AI agent</div><div class="meta"><time datetime="2026-05-25">25.05.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/busy-busy-busy-28.04.26.html">
+            <div><div class="name">Busy busy busy</div><div class="meta"><time datetime="2026-04-28">28.04.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/resin-machining-compatibility-25.03.26.html">
+            <div><div class="name">Resin machining compatibility</div><div class="meta"><time datetime="2026-03-25">25.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-progress-and-multi-board-18.03.26.html">
+            <div><div class="name">Vee block progress and multi board</div><div class="meta"><time datetime="2026-03-18">18.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/good-thread-test-results-10.03.26.html">
+            <div><div class="name">Good thread test results!</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/working-with-what-ive-got-10.03.26.html">
+            <div><div class="name">Working with what I’ve got</div><div class="meta"><time datetime="2026-03-10">10.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/when-life-gives-you-lemons-04.03.26.html" aria-current="page">
+            <div><div class="name">When life gives you lemons</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/muft-upgrade-04.03.26.html">
+            <div><div class="name">MUFT upgrade</div><div class="meta"><time datetime="2026-03-04">04.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/so-much-prototyping-01.03.26.html">
+            <div><div class="name">So much prototyping</div><div class="meta"><time datetime="2026-03-01">01.03.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-results-and-calliper-holder-16.02.26.html">
+            <div><div class="name">Vee block clamp results and calliper holder</div><div class="meta"><time datetime="2026-02-16">16.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-block-clamp-tests-14.02.26.html">
+            <div><div class="name">Vee Block Clamp Tests</div><div class="meta"><time datetime="2026-02-14">14.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+          <a class="nav-link" href="../posts/vee-blocks-resin-suction-forces-and-logging-10.02.26.html">
+            <div><div class="name">Vee Blocks, Resin Suction Forces and Logging</div><div class="meta"><time datetime="2026-02-10">10.02.26</time></div></div>
+            <div class="meta" aria-hidden="true">→</div>
+          </a>
+        </div>
       </div>
     </div>
   </aside>
 
-  <main class="container">
+  <main class="container" id="main-content" tabindex="-1">
     <article class="card">
       <div class="card-inner">
-        <h1 class="post-title" id="post-title">Loading…</h1>
+        <h1 class="post-title" id="post-title">When life gives you lemons</h1>
         <div class="post-meta">
-          <span class="pill">04.03.26</span>
-          <span class="pill">Prop Build</span>
-          <span class="pill">MUFT</span>
-          <span class="pill">CAD</span>
-          <span class="pill">3D Printing</span>
-          <span class="pill">Finishing</span>
+          <time class="pill" id="post-date" datetime="2026-03-04">04.03.26</time>
         </div>
 
-        <div class="markdown" id="post-content"></div>
+        <div class="markdown" id="post-content">
+<p>A project I worked on a while back was creating a replica <strong>portal gun</strong> from the game <em>Portal</em>.</p>
+<p><img src="../assets/images/portal-gun-reference-04.03.26.jpg" alt="Portal gun reference image" width="1024" height="615" loading="eager" decoding="async" fetchpriority="high"></p>
+<p>I printed it on my Ender 3 years ago and didn’t really put a lot of work into the post-processing. Recently I found out the shells to the gun were still intact, so I decided to rescue them and reprint the rest of the pieces on my new printer (the ones that broke while it was in storage).</p>
+<hr>
+<h2>First shell: seams, sanding, paint</h2>
+<p>I started by sanding the first piece and filling the seam with <strong>Milliput</strong>. I went from about <strong>150 grit all the way up to 1500</strong>.</p>
+<p>I’ve got a friend who professionally paints cars, so I asked him about painting it. He primed it and painted the first piece white for me, which came out really nice.</p>
+<p>He said the best finish (since it isn’t entirely glossy) is:</p>
+<ul>
+<li>sand to a really high grit</li>
+<li>then clear coat it</li>
+</ul>
+<p>So I’ve done the first pass at 150 to take off the high points, and now I’m going to work through the rest of the grits up to about <strong>3000</strong>.</p>
+<p><img src="../assets/images/portal-gun-sanding-progress-04.03.26.jpg" alt="Portal gun shell sanding progress" width="2048" height="1536" loading="lazy" decoding="async"></p>
+<hr>
+<h2>Next piece</h2>
+<p>The next piece is a lot bigger so it’s going to need a lot more filling and sanding to refine the shape and remove the layer lines.</p>
+<p>One thing I’ve noticed: sanding paint is way easier than removing layer lines — the layer line sanding takes forever.</p>
+<p>More updates soon once the next parts are reprinted and I’m further into the finishing.</p>
+        </div>
       </div>
 
       <div class="footer-nav">
-        <a class="btn" id="btn-prev" href="#"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
-        <a class="btn" id="btn-next" href="#"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
+        <a class="btn" id="btn-prev" href="../posts/muft-upgrade-04.03.26.html"><span aria-hidden="true">←</span> <span data-label>Previous</span></a>
+        <a class="btn" id="btn-next" href="../posts/working-with-what-ive-got-10.03.26.html"><span data-label>Next</span> <span aria-hidden="true">→</span></a>
       </div>
     </article>
   </main>
@@ -121,70 +214,6 @@ One thing I’ve noticed: sanding paint is way easier than removing layer lines 
 
 More updates soon once the next parts are reprinted and I’m further into the finishing.
 
----
-
-# MUFT upgrade
-
-I ran out of filament on the **5th piece** of the prototype — but I didn’t need it to finish to know a lot of the things I need to modify.
-
----
-
-## V2 design changes
-
-### 1) Split panels + bolt together
-
-First: I need to print the **side panels** and the **base** all separately and then bolt them together.
-
-This will:
-
-- increase overall strength (no more tall, vertical prints)
-- let me modify a single panel rather than reprinting the entire design
-
-[Photo placeholder: all finished pieces printed in PETG (ABS later)]
-
----
-
-### 2) Ventilation
-
-There’s **zero ventilation** in the current build, so I’ve designed a couple vent holes in this V2 base plate.
-
-[Photo placeholder: base plate design (SolidWorks)]
-
----
-
-### 3) GPU support / sag prevention
-
-I’ve used **brass inserts** under the graphics card so I can use bolts to prevent GPU sag and hold the GPU at a set vertical height.
-
-Since it’s mounted horizontally (facing down), airflow will be pushed out the bottom — and the whole case will be raised to give it room.
-
----
-
-## Print time improvements
-
-The design is much more modular now.
-
-I’ve split it into:
-
-- **2 × 255 mm²** panels
-- the rest are smaller parts that fit on a single plate
-
-That means:
-
-- **3 plates instead of 6**
-- significantly less print time (**~9 hours vs ~30**)
-
----
-
-## Next post
-
-Next post I’ll show:
-
-- all components mounted
-- testing it to make sure it still boots
-- installing Linux
-- testing thermals
-- designing the side panels + top shell (with keyboard and trackpad)
   </script>
 
   <script src="../assets/js/site.js"></script>
