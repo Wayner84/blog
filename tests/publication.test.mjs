@@ -55,6 +55,10 @@ test('every post is statically readable and publication-ready', async () => {
     assert.equal(actualText, expectedText, `${post.path} rendered content is stale`);
 
     const currentName = path.basename(post.path);
+    assert.ok(
+      html.includes(`<meta name="post:slug" content="${currentName}" />`),
+      `${post.path} must expose its own filename to the client-side enhancer`
+    );
     assert.match(html, new RegExp(`<a class="nav-link"[^>]*href="\\.\\.\\/posts\\/${currentName.replaceAll('.', '\\.')}"[^>]*aria-current="page"`));
 
     for (const socialImage of html.matchAll(/<meta (?:property="og:image"|name="twitter:image") content="https:\/\/wayner84\.github\.io\/blog\/([^"]+)"/g)) {

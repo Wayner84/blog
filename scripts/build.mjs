@@ -194,6 +194,7 @@ for (let index = 0; index < posts.length; index += 1) {
   ].join('\n');
 
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(post.title)} — Ween’s Projects</title>`);
+  html = html.replace(/<meta name="post:slug" content="[^"]+" \/>/, `<meta name="post:slug" content="${escapeAttr(file)}" />`);
   html = replaceOrInsert(html, '<!-- generated:post-metadata:start -->', '<!-- generated:post-metadata:end -->', metadata, /<title>[^<]+<\/title>/);
   html = html.replace(/\s*<!-- Markdown renderer \(CDN\) -->\s*<script src="https:\/\/cdn\.jsdelivr\.net\/npm\/marked\/marked\.min\.js"><\/script>/, '');
   html = html.replace(/<h1 class="post-title" id="post-title">[\s\S]*?<\/h1>/, `<h1 class="post-title" id="post-title">${escapeHtml(post.title)}</h1>`);
