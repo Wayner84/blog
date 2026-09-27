@@ -2,6 +2,13 @@
   "title": "Ween’s Projects",
   "posts": [
     {
+      "title": "Beefier machine",
+      "date": "27.09.26",
+      "published": "2026-09-27",
+      "description": "I’ve been using my XPS 13 for about a year now. The CPU performance is still really good, but it only has 16 GB of RAM and no dedicated graphics card. Add…",
+      "path": "posts/beefier-machine-27.09.26.html"
+    },
+    {
       "title": "Back to it",
       "date": "15.09.26",
       "published": "2026-09-15",
